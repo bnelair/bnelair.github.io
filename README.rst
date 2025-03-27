@@ -10,13 +10,13 @@ This project has adapted a significant portion of the `BEST Toolbox <https://git
 
 Current repositories include:
 
-- `BrainMaze EEG <https://github.com/bnelair/brainmaze_eeg>`_
+- `BrainMaze EEG <https://github.com/bnelair/brainmaze_eeg>`_ - `Documentation <https://bnelair.github.io/brainmaze_eeg/>`_
     - Functionalities related to EEG signal processing including transformations, classification and feature extraction.
 
-- `BrainMaze Utils <https://github.com/bnelair/brainmaze_utils>`_
+- `BrainMaze Utils <https://github.com/bnelair/brainmaze_utils>`_ - `Documentation <https://bnelair.github.io/brainmaze_utils/>`_
     - Elementary utilities used across multiple BrainMaze projects and codes. This was separated to ensure lightweight deployment and package controllability.
 
-- `BrainMaze ZMQ <https://github.com/bnelair/brainmaze-zmq>`_
+- `BrainMaze ZMQ <https://github.com/bnelair/brainmaze-zmq>`_ - `Documentation <https://bnelair.github.io/brainmaze_zmq/>`_
     - Wrappers around ZMQ controlling for optimal socket release after process being killed etc.
 
 
