@@ -6,7 +6,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Search - BrainMaze: A Toolbox to Analyze Brain Electrophysiology, Behavior and Dynamics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>brainmaze_utils &#8212; BrainMaze: A Toolbox to Analyze Brain Electrophysiology, Behavior and Dynamics</title>
   
   
   
@@ -38,13 +40,12 @@
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'search';</script>
-  <script src="_static/searchtools.js"></script>
-  <script src="_static/language_data.js"></script>
-  <script src="searchindex.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'brainmaze_utils';</script>
     <link rel="icon" href="_static/brainmaze_173x173.png"/>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="files" href="utils/files.html" />
+    <link rel="prev" title="utils" href="zmq/utils.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -76,7 +77,7 @@
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
-      action="#"
+      action="search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -106,8 +107,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -169,13 +168,13 @@
 <li class="toctree-l1"><a class="reference internal" href="projects/project_wave_detector.html">EEG Wave Detection and Analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">BrainMaze - Python Packages</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="brainmaze_zmq.html">brainmaze_zmq</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="zmq/abstract.html">abstract</a></li>
 <li class="toctree-l2"><a class="reference internal" href="zmq/utils.html">utils</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="brainmaze_utils.html">brainmaze_utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">brainmaze_utils</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="utils/files.html">files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils/signal.html">signal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils/stat.html">stats</a></li>
@@ -259,6 +258,54 @@
 
 
 
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/brainmaze_utils.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
   title="Fullscreen mode"
@@ -292,7 +339,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -301,42 +350,106 @@ document.write(`
 </div>
               
               
-  <div class="bd-search-container">
-    <h1>Search</h1>
-    <noscript>
-      <div class="admonition error">
-        <p class="admonition-title">Error</p>
-        <p>Please activate JavaScript to enable the search functionality.</p>
-      </div>
-    </noscript>
-    
-<form class="bd-search d-flex align-items-center"
-      action="#"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    <div id="search-results"></div>
-  </div>
-  <script>
-    // Activate the search field on page load
-    let searchInput = document.querySelector("form.bd-search input");
-    if (searchInput) {
-        searchInput.focus();
-        searchInput.select();
-        console.log("[PST]: Set focus on search field.");
-    }
-  </script>
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>brainmaze_utils</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brainmaze-brain-electrophysiology-behavior-and-dynamics-analysis-toolbox-utils">BrainMaze: Brain Electrophysiology, Behavior and Dynamics Analysis Toolbox - Utils</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-contribute">How to contribute</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgment">Acknowledgment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brainmaze-packages">BrainMaze Packages</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="brainmaze-utils">
+<h1>brainmaze_utils<a class="headerlink" href="#brainmaze-utils" title="Link to this heading">#</a></h1>
+<section id="brainmaze-brain-electrophysiology-behavior-and-dynamics-analysis-toolbox-utils">
+<h2>BrainMaze: Brain Electrophysiology, Behavior and Dynamics Analysis Toolbox - Utils<a class="headerlink" href="#brainmaze-brain-electrophysiology-behavior-and-dynamics-analysis-toolbox-utils" title="Link to this heading">#</a></h2>
+<p>This toolbox provides a generic tools for the BrainMaze package. This tool was separated from the BrainMaze toolbox to support a convenient and lightweight sharing of these tools across projects.</p>
+<p>This project was originally developed as a part of the <a class="reference external" href="https://github.com/bnelair/best-toolbox">BEhavioral STate Analysis Toolbox (BEST)</a> project. However, the development has transferred to the BrainMaze project.</p>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h2>
+<p>Documentation is available <a class="reference external" href="https://bnelair.github.io/brainmaze_utils">here</a>.</p>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>brainmaze-utils
+</pre></div>
+</div>
+</section>
+<section id="how-to-contribute">
+<h2>How to contribute<a class="headerlink" href="#how-to-contribute" title="Link to this heading">#</a></h2>
+<p>The project has 2 main protected branches <em>main</em> that contains official software releases and <em>dev</em> that contains the latest feature implementations shared with developers.
+To implement a new feature a new branch should be created from the <em>dev</em> branch with name pattern of <em>developer_identifier/feature_name</em>.</p>
+<p>After the feature is implemented, a pull request can be created to merge the feature branch into the <em>dev</em> branch with. Pull requests need to be reviewed by the code owners.
+Drafting of new releases will be performed by the code owners in using pull request from <em>dev</em> to <em>main</em> and drafting a new release on GitHub.</p>
+<p>New functions need to be implemented with Sphinx compatible docstrings. The documentation is automatically generated from the docstrings using Sphinx using make_docs.sh either calling its contents.
+Documentation source is in docs_src/ and the generated documentation is in docs/. .doctrees is not shared in the repository.</p>
+<section id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h3>
+<p>If updating the docs web generated using sphinx, there might be a lot of changes resulting in a buffer hang up. Using SSH over HTTPS is preferred. If you are using HTTPS, you can increase the buffer size by running the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>http.postBuffer<span class="w"> </span><span class="m">524288000</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Link to this heading">#</a></h2>
+<p>This software is licensed under BSD-3Clause license. For details see the <a class="reference external" href="https://github.com/bnelair/brainmaze_utils/blob/master/LICENSE">LICENSE</a> file in the root directory of this project.</p>
+</section>
+<section id="acknowledgment">
+<h2>Acknowledgment<a class="headerlink" href="#acknowledgment" title="Link to this heading">#</a></h2>
+<p>This code was developed and originally published for the first time with by (Mivalt 2022, and Sladky 2022).
+We appreciate you citing these papers when utilizing this toolbox in further research work.</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">F. Mivalt et V. Kremen et al., “Electrical brain stimulation and continuous behavioral state tracking in ambulatory humans,” J. Neural Eng., vol. 19, no. 1, p. 016019, Feb. 2022, doi: 10.1088/1741-2552/ac4bfd.</div>
+<div class="line"><br /></div>
+<div class="line">V. Sladky et al., “Distributed brain co-processor for tracking spikes, seizures and behaviour during electrical brain stimulation,” Brain Commun., vol. 4, no. 3, May 2022, doi: 10.1093/braincomms/fcac115.</div>
+</div>
+</div></blockquote>
+</section>
+<section id="brainmaze-packages">
+<h2>BrainMaze Packages<a class="headerlink" href="#brainmaze-packages" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">BrainMaze - Python Packages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="utils/files.html">files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils/signal.html">signal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils/stat.html">stats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils/types.html">types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils/vector.html">vector</a></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
 
               
               
@@ -345,12 +458,54 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="zmq/utils.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">utils</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="utils/files.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">files</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brainmaze-brain-electrophysiology-behavior-and-dynamics-analysis-toolbox-utils">BrainMaze: Brain Electrophysiology, Behavior and Dynamics Analysis Toolbox - Utils</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-contribute">How to contribute</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgment">Acknowledgment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brainmaze-packages">BrainMaze Packages</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

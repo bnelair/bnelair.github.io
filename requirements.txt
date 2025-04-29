@@ -1,2 +1,5 @@
 sphinx
 sphinx_book_theme
+
+brainmaze_zmq
+brainmaze_utils

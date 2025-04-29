@@ -11,13 +11,13 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 import os
-
 import sys
+
 
 
 # Get the absolute path of the project root directory
 curwd = os.path.dirname(os.path.abspath(__file__))
-projd = os.path.abspath(os.path.join(curwd, '..', '..'))
+projd = os.path.abspath(os.path.join(curwd, '..', 'tmp', 'codes'))
 
 sys.path.insert(0, projd)
 
@@ -30,9 +30,9 @@ os.chdir(curwd)
 # -- Project information -----------------------------------------------------
 
 # General information about the project.
-project = 'BrainMaze: A Toolbox to Analyze Brain Electrophysiology, Behavior and Dynamics - Utils'
+project = 'BrainMaze: A Toolbox to Analyze Brain Electrophysiology, Behavior and Dynamics'
 author = 'Filip Mivalt M.Sc., Ph.D.'
-copyright = '2020-present, Mayo Clinic Department of Neurology - Laboratory of Bioelectronics Neurophysiology and Engineering. All rights reserved'
+copyright = '2019-present, Mayo Clinic Department of Neurology - Laboratory of Bioelectronics Neurophysiology and Engineering. All rights reserved'
 
 
 # The version info for the project you're documenting, acts as replacement for
@@ -146,7 +146,7 @@ html_theme_options = {
     # Toc options
     'collapse_navigation': False,
     'navigation_depth': 5,
-    "repository_url": "https://github.com/bnelair/brainmaze_utils",
+    "repository_url": "https://github.com/bnelair/brainmaze_docs",
     "use_repository_button": True,
     "home_page_in_toc": True
 }
@@ -157,19 +157,19 @@ html_theme_options = {
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'BrainMaze: A Toolbox to Analyze Brain Electrophysiology, Behavior and Dynamics - Utils'
+html_title = 'BrainMaze: A Toolbox to Analyze Brain Electrophysiology, Behavior and Dynamics'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = 'BrainMaze: Utils'
+html_short_title = 'BrainMaze Docs'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "../../img/brainmaze_1757x1762.png"
+html_logo = "../img/brainmaze_1757x1762.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = "../../img/brainmaze_173x173.png"
+html_favicon = "../img/brainmaze_173x173.png"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -223,7 +223,7 @@ html_show_copyright = True
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'brainmaze-utils'
+htmlhelp_basename = 'brainmaze'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -308,3 +308,5 @@ latex_logo = "../../img/brainmaze_1757x1762.png"
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+
