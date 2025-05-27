@@ -1,6 +1,6 @@
 # Makefile for Sphinx documentation with sphinx-multiproject
 
-PROJECTS      := main_page bnel_projects brainmaze
+PROJECTS      := main_page bnel_projects brainmaze mef_tools
 
 SOURCEDIR     = source
 HTMLDIR       = docs

@@ -1,12 +1,14 @@
 #!/bin/bash
 
 RDIR=$(pwd)
-USE_BRANCH="fmivalt/integration"
+
+USE_BRANCH=""
 
 repos=(
     "git@github.com:bnelair/brainmaze_eeg.git"
     "git@github.com:bnelair/brainmaze_utils.git"
     "git@github.com:bnelair/brainmaze_zmq.git"
+    "git@github.com:bnelair/mef_tools.git"
 )
 
 
@@ -56,15 +58,40 @@ for i in "${!repos[@]}"; do
 
         # Checkout the main branch (or 'master', adjust if needed)
         # Check if 'main' branch exists, otherwise try 'master'
-        if git rev-parse --verify main >/dev/null 2>&1; then
-            git checkout $USE_BRANCH
-            echo "Checked out 'main' branch."
-        else
-            echo "Warning: Neither 'main' nor '$USE_BRANCH' branch found for $REPO_NAME. Skipping."
-            cd - > /dev/null # Navigate back to the previous directory
-            rm -rf "${DIR_CLONE}/$REPO_NAME"
-            continue # Skip to the next repository
-        fi
+#        if git rev-parse --verify main >/dev/null 2>&1; then
+#            git checkout $USE_BRANCH
+#            echo "Checked out 'main' branch."
+#        else
+#            echo "Warning: Neither 'main' nor '$USE_BRANCH' branch found for $REPO_NAME. Skipping."
+#            cd - > /dev/null # Navigate back to the previous directory
+#            rm -rf "${DIR_CLONE}/$REPO_NAME"
+#            continue # Skip to the next repository
+#        fi
+
+      if [ -z "$USE_BRANCH" ]; then
+          if git rev-parse --verify main >/dev/null 2>&1; then
+              git checkout main
+              echo "Checked out 'main' branch."
+          elif git rev-parse --verify master >/dev/null 2>&1; then
+              git checkout master
+              echo "Checked out 'master' branch."
+          else
+              echo "Warning: Neither 'main' nor 'master' branch found for $REPO_NAME. Skipping."
+              cd - > /dev/null # Navigate back to the previous directory
+              rm -rf "${DIR_CLONE}/$REPO_NAME"
+              continue # Skip to the next repository
+          fi
+      else
+          if git rev-parse --verify "$USE_BRANCH" >/dev/null 2>&1; then
+              git checkout "$USE_BRANCH"
+              echo "Checked out '$USE_BRANCH' branch."
+          else
+              echo "Warning: Branch '$USE_BRANCH' not found for $REPO_NAME. Skipping."
+              cd - > /dev/null # Navigate back to the previous directory
+              rm -rf "${DIR_CLONE}/$REPO_NAME"
+              continue # Skip to the next repository
+          fi
+      fi
 
         cp -R "$DIR_SRC_CODE" "$DIR_DST_CODE"
         echo "Copied $DIR_SRC_CODE to $DIR_DST_CODE."

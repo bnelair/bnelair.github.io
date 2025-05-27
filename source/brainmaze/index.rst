@@ -9,8 +9,6 @@ BrainMaze
 
    main_page_redirect
 
-BrainMaze
-""""""""""""""""""""
 
 .. toctree::
    :maxdepth: 4

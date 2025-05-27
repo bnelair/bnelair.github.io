@@ -28,6 +28,11 @@ The tools are designed to facilitate the analysis of brain electrophysiology, be
 
       A Python toolbox with tools for processing of intracranial iEEG recordings.
 
+   .. grid-item-card:: MEF Tools
+      :link: mef_tools/index.html
+
+      A Python toolbox for reading and writing Multiscale Electrophysiology Format (MEF3) files.
+
    .. grid-item-card:: Papers with Code 🔬
       :link: bnel_projects/index.html
 
