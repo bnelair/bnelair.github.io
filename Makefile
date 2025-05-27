@@ -39,4 +39,5 @@ html:
 	done
 	@echo "\n--- Multi-project build finished successfully! ---"
 	@echo "Your documentation is ready in: $(HTMLDIR)"
+	@touch "$(HTMLDIR)/.nojekyll"
 

@@ -9,7 +9,7 @@ Bioelectronics Neuropysiology and Engineering Lab (BNEL)
 
 
 This is the central documentation hub for software tools developed in the Bioelectronics Neuropysiology and Engineering
-Lab (BNEL) at Mayo Clinic. The tools are designed to facilitate the analysis of brainelectrophysiology, behavior,
+Lab (BNEL) at Mayo Clinic. The tools are designed to facilitate the analysis of brain electrophysiology, behavior,
 and dynamics.
 
 .. toctree::
