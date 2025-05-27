@@ -1,0 +1,1107 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>mef_tools &#8212; MEF Tools</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'MEF_Tools';</script>
+    <link rel="icon" href="_static/logo_bnel.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="BNEL - Main Page" href="main_page_redirect.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_bnel.png" class="logo__image only-light" alt="MEF Tools - Home"/>
+    <script>document.write(`<img src="_static/logo_bnel.png" class="logo__image only-dark" alt="MEF Tools - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    MEF_Tools
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="main_page_redirect.html">BNEL - Main Page</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mef Tools Documentation</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">mef_tools</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/bnelair/mef_tools" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/MEF_Tools.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>mef_tools</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">mef_tools</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-mef_tools.io">mef_tools.io</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader"><code class="docutils literal notranslate"><span class="pre">MefReader</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.__version__"><code class="docutils literal notranslate"><span class="pre">MefReader.__version__</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.channels"><code class="docutils literal notranslate"><span class="pre">MefReader.channels</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.close"><code class="docutils literal notranslate"><span class="pre">MefReader.close()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.get_annotations"><code class="docutils literal notranslate"><span class="pre">MefReader.get_annotations()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.get_channel_info"><code class="docutils literal notranslate"><span class="pre">MefReader.get_channel_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.get_data"><code class="docutils literal notranslate"><span class="pre">MefReader.get_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.get_property"><code class="docutils literal notranslate"><span class="pre">MefReader.get_property()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.get_raw_data"><code class="docutils literal notranslate"><span class="pre">MefReader.get_raw_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.properties"><code class="docutils literal notranslate"><span class="pre">MefReader.properties</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter"><code class="docutils literal notranslate"><span class="pre">MefWriter</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.session_path"><code class="docutils literal notranslate"><span class="pre">MefWriter.session_path</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.overwrite"><code class="docutils literal notranslate"><span class="pre">MefWriter.overwrite</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.password1"><code class="docutils literal notranslate"><span class="pre">MefWriter.password1</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.password2"><code class="docutils literal notranslate"><span class="pre">MefWriter.password2</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.verbose"><code class="docutils literal notranslate"><span class="pre">MefWriter.verbose</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.data_units"><code class="docutils literal notranslate"><span class="pre">MefWriter.data_units</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.get_mefblock_len"><code class="docutils literal notranslate"><span class="pre">MefWriter.get_mefblock_len()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.max_nans_written"><code class="docutils literal notranslate"><span class="pre">MefWriter.max_nans_written</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.mef_block_len"><code class="docutils literal notranslate"><span class="pre">MefWriter.mef_block_len</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.record_offset"><code class="docutils literal notranslate"><span class="pre">MefWriter.record_offset</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.write_annotations"><code class="docutils literal notranslate"><span class="pre">MefWriter.write_annotations()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.write_data"><code class="docutils literal notranslate"><span class="pre">MefWriter.write_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.check_data_integrity"><code class="docutils literal notranslate"><span class="pre">check_data_integrity()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.check_int32_dynamic_range"><code class="docutils literal notranslate"><span class="pre">check_int32_dynamic_range()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.convert_data_to_int32"><code class="docutils literal notranslate"><span class="pre">convert_data_to_int32()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.create_pink_noise"><code class="docutils literal notranslate"><span class="pre">create_pink_noise()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.find_intervals_binary_vector"><code class="docutils literal notranslate"><span class="pre">find_intervals_binary_vector()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.infer_conversion_factor"><code class="docutils literal notranslate"><span class="pre">infer_conversion_factor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.scale_signal"><code class="docutils literal notranslate"><span class="pre">scale_signal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.voss"><code class="docutils literal notranslate"><span class="pre">voss()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mef-tools-client">mef_tools.client</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mef-tools-server">mef_tools.server</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mef-tools-db">mef_tools.db</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#readmeme">ReadmeMe</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#license">LICENSE</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="mef-tools">
+<h1>mef_tools<a class="headerlink" href="#mef-tools" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<hr class="docutils" />
+<section id="module-mef_tools.io">
+<span id="mef-tools-io"></span><h2>mef_tools.io<a class="headerlink" href="#module-mef_tools.io" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="mef_tools.io.MefReader">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mef_tools.io.</span></span><span class="sig-name descname"><span class="pre">MefReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.MefReader" title="Link to this definition">#</a></dt>
+<dd><p>Class to handle reading of MEF files.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mef_tools.io.MefReader.__version__">
+<span class="sig-name descname"><span class="pre">__version__</span></span><a class="headerlink" href="#mef_tools.io.MefReader.__version__" title="Link to this definition">#</a></dt>
+<dd><p>Version of the MefReader class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mef_tools.io.MefReader.channels">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channels</span></span><a class="headerlink" href="#mef_tools.io.MefReader.channels" title="Link to this definition">#</a></dt>
+<dd><p>Returns a list of all channels present in the session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of channels.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mef_tools.io.MefReader.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.MefReader.close" title="Link to this definition">#</a></dt>
+<dd><p>Closes the MEF session.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mef_tools.io.MefReader.get_annotations">
+<span class="sig-name descname"><span class="pre">get_annotations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.MefReader.get_annotations" title="Link to this definition">#</a></dt>
+<dd><p>Returns annotations for a specified channel. If no channel is specified,
+returns annotations for all channels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>channel</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the channel. If not provided, method returns annotations for all channels.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of annotations.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mef_tools.io.MefReader.get_channel_info">
+<span class="sig-name descname"><span class="pre">get_channel_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.MefReader.get_channel_info" title="Link to this definition">#</a></dt>
+<dd><p>Returns information for a given channel. If no channel is specified,
+returns information for all channels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>channel</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the channel. If not provided, method returns info for all channels.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Channel info or list of channel info.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mef_tools.io.MefReader.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_stamp1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_stamp2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.MefReader.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Returns processed data for specified channels and time stamps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channels</strong> (<em>int64</em><em>, </em><em>str</em><em>, </em><em>list</em><em>, or </em><em>numpy.ndarray</em>)</p></li>
+<li><p><strong>data.</strong> (<em>Channels for which to return</em>)</p></li>
+<li><p><strong>t_stamp1</strong> (<em>int64</em><em>, </em><em>optional</em>) – Start time stamp. If not provided, method uses the earliest time stamp.</p></li>
+<li><p><strong>t_stamp2</strong> (<em>int64</em><em>, </em><em>optional</em>) – End time stamp. If not provided, method uses the latest time stamp.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Array of processed data.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mef_tools.io.MefReader.get_property">
+<span class="sig-name descname"><span class="pre">get_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">property_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.MefReader.get_property" title="Link to this definition">#</a></dt>
+<dd><p>Returns the specified property for a given channel. If no channel is specified,
+returns the property for all channels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>property_name</strong> (<em>str</em>) – Name of the property.</p></li>
+<li><p><strong>channel</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the channel. If not provided, method returns property for all channels.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Property or list of properties.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list or str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mef_tools.io.MefReader.get_raw_data">
+<span class="sig-name descname"><span class="pre">get_raw_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_stamp1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_stamp2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.MefReader.get_raw_data" title="Link to this definition">#</a></dt>
+<dd><p>Returns raw data for specified channels and time stamps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channels</strong> (<em>int64</em><em>, </em><em>str</em><em>, </em><em>list</em><em>, or </em><em>numpy.ndarray</em>) – Channels for which to return data.</p></li>
+<li><p><strong>t_stamp1</strong> (<em>int64</em><em>, </em><em>optional</em>) – Start time stamp. If not provided, method uses the earliest time stamp.</p></li>
+<li><p><strong>t_stamp2</strong> (<em>int64</em><em>, </em><em>optional</em>) – End time stamp. If not provided, method uses the latest time stamp.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Array of raw data.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mef_tools.io.MefReader.properties">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">properties</span></span><a class="headerlink" href="#mef_tools.io.MefReader.properties" title="Link to this definition">#</a></dt>
+<dd><p>Returns a list of all unique properties across all channels in the session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of unique properties.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mef_tools.io.MefWriter">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mef_tools.io.</span></span><span class="sig-name descname"><span class="pre">MefWriter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.MefWriter" title="Link to this definition">#</a></dt>
+<dd><p>MefWriter is a utility class for writing data in the MEF3 format. The class allows easy writing and appending of data to existing MEF3 files.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mef_tools.io.MefWriter.session_path">
+<span class="sig-name descname"><span class="pre">session_path</span></span><a class="headerlink" href="#mef_tools.io.MefWriter.session_path" title="Link to this definition">#</a></dt>
+<dd><p>The path of the MEF3 session to be written.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mef_tools.io.MefWriter.overwrite">
+<span class="sig-name descname"><span class="pre">overwrite</span></span><a class="headerlink" href="#mef_tools.io.MefWriter.overwrite" title="Link to this definition">#</a></dt>
+<dd><p>A boolean flag that if set to True, allows overwriting of existing files. Default is False.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mef_tools.io.MefWriter.password1">
+<span class="sig-name descname"><span class="pre">password1</span></span><a class="headerlink" href="#mef_tools.io.MefWriter.password1" title="Link to this definition">#</a></dt>
+<dd><p>The password for level 1 encryption. Default is None. This password is needed only for while creating the session.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mef_tools.io.MefWriter.password2">
+<span class="sig-name descname"><span class="pre">password2</span></span><a class="headerlink" href="#mef_tools.io.MefWriter.password2" title="Link to this definition">#</a></dt>
+<dd><p>The password for level 2 encryption. Default is None. This password is required for any read/write operation of an existing session.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mef_tools.io.MefWriter.verbose">
+<span class="sig-name descname"><span class="pre">verbose</span></span><a class="headerlink" href="#mef_tools.io.MefWriter.verbose" title="Link to this definition">#</a></dt>
+<dd><p>A boolean flag that if set to True, enables verbose mode. Default is False.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mef_tools.io.MefWriter.data_units">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data_units</span></span><a class="headerlink" href="#mef_tools.io.MefWriter.data_units" title="Link to this definition">#</a></dt>
+<dd><p>Getter for the units of the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The units of the data.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mef_tools.io.MefWriter.get_mefblock_len">
+<span class="sig-name descname"><span class="pre">get_mefblock_len</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.MefWriter.get_mefblock_len" title="Link to this definition">#</a></dt>
+<dd><p>Get the length of a MEF block.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fs</strong> (<em>float</em>) – Sampling frequency of the data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Length of the MEF block.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mef_tools.io.MefWriter.max_nans_written">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_nans_written</span></span><a class="headerlink" href="#mef_tools.io.MefWriter.max_nans_written" title="Link to this definition">#</a></dt>
+<dd><p>Getter for the maximum number of NaN values allowed to be written. NaNs that are written as values will be written as the maximum value of the data type.
+Recommended value is 0, which will not allow any NaN values to be written. The signal will be split into data blocks based on the NaN values. This might cause poor data compression if a lot of NaN segments are present in the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The maximum number of NaN values allowed to be written.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mef_tools.io.MefWriter.mef_block_len">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mef_block_len</span></span><a class="headerlink" href="#mef_tools.io.MefWriter.mef_block_len" title="Link to this definition">#</a></dt>
+<dd><p>Getter for the MEF block length. Higher the mef_block length, better the compression, but higher the memory usage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The MEF block length.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mef_tools.io.MefWriter.record_offset">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">record_offset</span></span><a class="headerlink" href="#mef_tools.io.MefWriter.record_offset" title="Link to this definition">#</a></dt>
+<dd><p>Getter for the offset of the record.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The offset of the record.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mef_tools.io.MefWriter.write_annotations">
+<span class="sig-name descname"><span class="pre">write_annotations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">annotations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.MefWriter.write_annotations" title="Link to this definition">#</a></dt>
+<dd><p>Method writes annotations to a session/channel. Method handles new annotations or appending to existing annotations. Input
+data has to have required structure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annotations</strong> (<em>pandas.DataFrame</em>) – DataFrame has to have a proper structure with columns - time column [uutctimestamp], type [‘str specified in pymef’ -
+Note or EDFA],
+text [‘str’],
+optional duration [usec]</p></li>
+<li><p><strong>channel</strong> (<em>str</em><em>, </em><em>optional</em>) – annotations are written at the channel level</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mef_tools.io.MefWriter.write_data">
+<span class="sig-name descname"><span class="pre">write_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_write</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_uutc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_uutc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_segment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discont_handler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reload_metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.MefWriter.write_data" title="Link to this definition">#</a></dt>
+<dd><p>General method for writing any data to the session. Method handles new channel data or appending to existing channel data
+automatically. Discont handler
+flag
+can be used for
+fragmentation to smaller intervals which
+are written in sequence with nans intervals skipped.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_write</strong> (<em>np.ndarray</em>) – data to be written, data will be scaled a translated to int32 automatically if precision parameter is not given</p></li>
+<li><p><strong>channel</strong> (<em>str</em>) – name of the stored channel</p></li>
+<li><p><strong>start_uutc</strong> (<em>int64</em>) – uutc timestamp of the first sample</p></li>
+<li><p><strong>sampling_freq</strong> (<em>float</em>) – only 0.1 Hz resolution is tested</p></li>
+<li><p><strong>end_uutc</strong> (<em>int</em><em>, </em><em>optional</em>) – end of the data uutc timestamp, if less data is provided than end_uutc - start_uutc nans gap will be inserted to the data</p></li>
+<li><p><strong>precision</strong> (<em>int</em><em>, </em><em>optional</em>) – <p>Number of floating point to be scaled above zero. Data are multiplied by 10**precision before writing and scale factor is
+stored in metadata. used for transforming data to
+int32, can be positive or 0 = no change</p>
+<blockquote>
+<div><p>in scale, only loss of decimals.</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>new_segment</strong> (<em>bool</em><em>, </em><em>optional</em>) – if new mef3 segment should be created</p></li>
+<li><p><strong>discont_handler</strong> (<em>bool</em><em>, </em><em>optional</em>) – disconnected segments will be stored in intervals if the gap in data is higher than max_nans_written property</p></li>
+<li><p><strong>reload_metadata</strong> (<em>bool</em><em>, </em><em>optional</em>) – default: true. Parameter Controls reloading of metadata after writing new data - frequent call of write method on short
+signals can
+slow down
+writing. When false appending is not protected for correct endtime check, but data write is faster. Metadata are always
+reloaded with new segment.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>out</strong> – True on success</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mef_tools.io.check_data_integrity">
+<span class="sig-prename descclassname"><span class="pre">mef_tools.io.</span></span><span class="sig-name descname"><span class="pre">check_data_integrity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">original_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">converted_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.check_data_integrity" title="Link to this definition">#</a></dt>
+<dd><p>Check the integrity of the original data against the converted data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>original_data</strong> (<em>array-like</em>) – The original data before conversion.</p></li>
+<li><p><strong>converted_data</strong> (<em>array-like</em>) – The data after conversion.</p></li>
+<li><p><strong>precision</strong> (<em>int</em>) – The precision used during the conversion process.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>result_bin</strong> – True if all close, else False.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function checks the integrity of the original data against the converted data.
+It converts the converted data back to the original scale, excludes NaNs, and checks
+if the original and reconverted data are close to each other within a specified tolerance.
+The check is performed using numpy’s allclose function with a tolerance of 0.1^(precision-1).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mef_tools.io.check_int32_dynamic_range">
+<span class="sig-prename descclassname"><span class="pre">mef_tools.io.</span></span><span class="sig-name descname"><span class="pre">check_int32_dynamic_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.check_int32_dynamic_range" title="Link to this definition">#</a></dt>
+<dd><p>Checks whether the scaled range of the input values falls within the dynamic range of int32.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_min</strong> (<em>float</em><em> or </em><em>int</em>) – The minimum value of the input.</p></li>
+<li><p><strong>x_max</strong> (<em>float</em><em> or </em><em>int</em>) – The maximum value of the input.</p></li>
+<li><p><strong>alpha</strong> (<em>float</em><em> or </em><em>int</em>) – The scaling factor applied to the input range.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Returns True if the scaled range falls within the dynamic range of int32. Otherwise, returns False.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function checks whether the input range, when scaled by a factor of alpha,
+falls within the dynamic range of the int32 datatype. If the scaled range exceeds
+the dynamic range of int32, the function returns False. If the scaled range falls
+within the dynamic range of int32, the function returns True.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mef_tools.io.convert_data_to_int32">
+<span class="sig-prename descclassname"><span class="pre">mef_tools.io.</span></span><span class="sig-name descname"><span class="pre">convert_data_to_int32</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.convert_data_to_int32" title="Link to this definition">#</a></dt>
+<dd><p>Converts the input data to int32 type, optionally scaling it by a specified factor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>array-like</em>) – The input data.</p></li>
+<li><p><strong>precision</strong> (<em>int</em><em>, </em><em>optional</em>) – The scaling factor (expressed as a power of 10) to apply to the data. If not provided,
+it will be inferred using the <cite>infer_conversion_factor</cite> function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>data_int32</strong> – The input data converted to int32 type and scaled by the specified factor.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function converts the input data to int32 type. If a scaling factor (precision) is
+provided, it is used to scale the data before conversion. If no scaling factor is
+provided, the function infers an optimal factor using the <cite>infer_conversion_factor</cite> function.</p>
+<p>The data is first rounded to the specified number of decimal places, then multiplied by
+10 to the power of the precision factor, and finally cast to int32 type.</p>
+<p>If the specified precision is less than 0 or not an integer, a warning is printed and
+the precision is set to 0, meaning no scaling is applied.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mef_tools.io.create_pink_noise">
+<span class="sig-prename descclassname"><span class="pre">mef_tools.io.</span></span><span class="sig-name descname"><span class="pre">create_pink_noise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seg_len</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_bound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">up_bound</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.create_pink_noise" title="Link to this definition">#</a></dt>
+<dd><p>Creates a pink noise signal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fs</strong> (<em>int</em>) – Sampling frequency of the signal.</p></li>
+<li><p><strong>seg_len</strong> (<em>int</em>) – Length of the segment for which pink noise is to be generated.</p></li>
+<li><p><strong>low_bound</strong> (<em>float</em>) – Lower bound for the amplitude of the generated noise.</p></li>
+<li><p><strong>up_bound</strong> (<em>float</em>) – Upper bound for the amplitude of the generated noise.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The generated pink noise signal.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the requested segment length results in too many samples.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mef_tools.io.find_intervals_binary_vector">
+<span class="sig-prename descclassname"><span class="pre">mef_tools.io.</span></span><span class="sig-name descname"><span class="pre">find_intervals_binary_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_bin_vector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_uutc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples_of_nans_allowed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.find_intervals_binary_vector" title="Link to this definition">#</a></dt>
+<dd><p>Detects continuous intervals of ones in a binary vector and returns their start and stop times.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_bin_vector</strong> (<em>array-like</em>) – The input binary vector.</p></li>
+<li><p><strong>fs</strong> (<em>int</em>) – The sampling frequency of the data.</p></li>
+<li><p><strong>start_uutc</strong> (<em>int</em>) – The start time of the data in microseconds since Unix Epoch.</p></li>
+<li><p><strong>samples_of_nans_allowed</strong> (<em>int</em><em>, </em><em>optional</em>) – The maximum number of consecutive zeros (NaNs) that are considered part of an interval.
+If not provided, it defaults to the sampling frequency.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>connected_detected_intervals</strong> – A DataFrame containing the start and stop times (in samples and microseconds) of the
+continuous intervals of ones in the input binary vector.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function processes a binary vector and detects continuous intervals of ones. It
+considers an interval to continue over a stretch of zeros (NaNs) if their number does not
+exceed a specified limit (samples_of_nans_allowed).</p>
+<p>The function returns a DataFrame containing the start and stop times of each detected
+interval, both in number of samples and in microseconds since Unix Epoch.</p>
+<p>The function first extends the input vector with a zero at both ends, then calculates the
+difference between consecutive elements. The positions where this difference equals 1
+correspond to the starts of intervals of ones, while the positions where it equals -1
+correspond to their ends. The function then merges intervals that are closer to each other
+than samples_of_nans_allowed and calculates the corresponding start and stop times.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mef_tools.io.infer_conversion_factor">
+<span class="sig-prename descclassname"><span class="pre">mef_tools.io.</span></span><span class="sig-name descname"><span class="pre">infer_conversion_factor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.infer_conversion_factor" title="Link to this definition">#</a></dt>
+<dd><p>Infers the optimal conversion factor to scale the input data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>array-like</em>) – The input data.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>precision</strong> – The optimal conversion factor for scaling the input data.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function infers the optimal conversion factor for scaling the input data
+to bring it within the dynamic range of int32. It initially calculates the mean
+of the absolute differences of the data and scales it up until the mean reaches
+a threshold value. Then it checks if the range of the scaled data falls within
+the dynamic range of int32, and if not, it reduces the scaling factor until the
+scaled data is within the dynamic range of int32.</p>
+<p>If the input data has high dynamic range, this function might decrease the scaling
+factor to avoid saturation. In this case, a warning message will be printed indicating
+the decreased precision.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mef_tools.io.scale_signal">
+<span class="sig-prename descclassname"><span class="pre">mef_tools.io.</span></span><span class="sig-name descname"><span class="pre">scale_signal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.scale_signal" title="Link to this definition">#</a></dt>
+<dd><p>Scales a signal to a specified range.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>numpy.ndarray</em>) – The input signal to scale.</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – The lower bound of the desired range.</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – The upper bound of the desired range.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The input signal, rescaled to the range [a, b].</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function performs a linear transformation of the input data such that
+the minimum value becomes <cite>a</cite> and the maximum value becomes <cite>b</cite>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mef_tools.io.voss">
+<span class="sig-prename descclassname"><span class="pre">mef_tools.io.</span></span><span class="sig-name descname"><span class="pre">voss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nrows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">32</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mef_tools.io.voss" title="Link to this definition">#</a></dt>
+<dd><p>Generates pink noise using the Voss-McCartney algorithm.</p>
+<p>nrows: number of values to generate
+rcols: number of random sources to add</p>
+<p>returns: NumPy array</p>
+</dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="mef-tools-client">
+<h2>mef_tools.client<a class="headerlink" href="#mef-tools-client" title="Link to this heading">#</a></h2>
+</section>
+<hr class="docutils" />
+<section id="mef-tools-server">
+<h2>mef_tools.server<a class="headerlink" href="#mef-tools-server" title="Link to this heading">#</a></h2>
+</section>
+<hr class="docutils" />
+<section id="mef-tools-db">
+<h2>mef_tools.db<a class="headerlink" href="#mef-tools-db" title="Link to this heading">#</a></h2>
+</section>
+</section>
+<hr class="docutils" />
+<section id="readmeme">
+<h1>ReadmeMe<a class="headerlink" href="#readmeme" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+</section>
+<hr class="docutils" />
+<section id="license">
+<h1>LICENSE<a class="headerlink" href="#license" title="Link to this heading">#</a></h1>
+<p>BSD 3-Clause License</p>
+<p>Copyright (c) 2024, Bioelectronics Engineering and Electrophysiology Lab - Mayo Clinic</p>
+<p>Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:</p>
+<ol class="arabic simple">
+<li><p>Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.</p></li>
+<li><p>Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.</p></li>
+<li><p>Neither the name of the copyright holder nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.</p></li>
+</ol>
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS”
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+<hr class="docutils" />
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="main_page_redirect.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">BNEL - Main Page</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">mef_tools</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-mef_tools.io">mef_tools.io</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader"><code class="docutils literal notranslate"><span class="pre">MefReader</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.__version__"><code class="docutils literal notranslate"><span class="pre">MefReader.__version__</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.channels"><code class="docutils literal notranslate"><span class="pre">MefReader.channels</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.close"><code class="docutils literal notranslate"><span class="pre">MefReader.close()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.get_annotations"><code class="docutils literal notranslate"><span class="pre">MefReader.get_annotations()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.get_channel_info"><code class="docutils literal notranslate"><span class="pre">MefReader.get_channel_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.get_data"><code class="docutils literal notranslate"><span class="pre">MefReader.get_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.get_property"><code class="docutils literal notranslate"><span class="pre">MefReader.get_property()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.get_raw_data"><code class="docutils literal notranslate"><span class="pre">MefReader.get_raw_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefReader.properties"><code class="docutils literal notranslate"><span class="pre">MefReader.properties</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter"><code class="docutils literal notranslate"><span class="pre">MefWriter</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.session_path"><code class="docutils literal notranslate"><span class="pre">MefWriter.session_path</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.overwrite"><code class="docutils literal notranslate"><span class="pre">MefWriter.overwrite</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.password1"><code class="docutils literal notranslate"><span class="pre">MefWriter.password1</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.password2"><code class="docutils literal notranslate"><span class="pre">MefWriter.password2</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.verbose"><code class="docutils literal notranslate"><span class="pre">MefWriter.verbose</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.data_units"><code class="docutils literal notranslate"><span class="pre">MefWriter.data_units</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.get_mefblock_len"><code class="docutils literal notranslate"><span class="pre">MefWriter.get_mefblock_len()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.max_nans_written"><code class="docutils literal notranslate"><span class="pre">MefWriter.max_nans_written</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.mef_block_len"><code class="docutils literal notranslate"><span class="pre">MefWriter.mef_block_len</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.record_offset"><code class="docutils literal notranslate"><span class="pre">MefWriter.record_offset</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.write_annotations"><code class="docutils literal notranslate"><span class="pre">MefWriter.write_annotations()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.MefWriter.write_data"><code class="docutils literal notranslate"><span class="pre">MefWriter.write_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.check_data_integrity"><code class="docutils literal notranslate"><span class="pre">check_data_integrity()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.check_int32_dynamic_range"><code class="docutils literal notranslate"><span class="pre">check_int32_dynamic_range()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.convert_data_to_int32"><code class="docutils literal notranslate"><span class="pre">convert_data_to_int32()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.create_pink_noise"><code class="docutils literal notranslate"><span class="pre">create_pink_noise()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.find_intervals_binary_vector"><code class="docutils literal notranslate"><span class="pre">find_intervals_binary_vector()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.infer_conversion_factor"><code class="docutils literal notranslate"><span class="pre">infer_conversion_factor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.scale_signal"><code class="docutils literal notranslate"><span class="pre">scale_signal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.voss"><code class="docutils literal notranslate"><span class="pre">voss()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mef-tools-client">mef_tools.client</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mef-tools-server">mef_tools.server</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mef-tools-db">mef_tools.db</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#readmeme">ReadmeMe</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#license">LICENSE</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Author name not set
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
