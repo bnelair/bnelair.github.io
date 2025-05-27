@@ -36,11 +36,11 @@ release = '0.0.1'
 language = 'en'
 autosectionlabel_prefix_document = True
 
-source_suffix = ['.rst', '.md']
-source_suffix = {
-   '.rst': 'restructuredtext',
-   '.md': 'markdown',
-}
+# source_suffix = ['.rst', '.md']
+# source_suffix = {
+#    '.rst': 'restructuredtext',
+#    '.md': 'markdown',
+# }
 
 master_doc = 'index'
 exclude_patterns = ['build', '_build', '._*', '._']
