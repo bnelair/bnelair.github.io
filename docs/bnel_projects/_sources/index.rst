@@ -1,9 +1,10 @@
 
-BNEL Projects with Code
-"""""""""""""""""""""""""""""
+.. include:: ./README.md
+   :parser: markdown
+
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 1
    :caption: Home
 
    main_page_redirect

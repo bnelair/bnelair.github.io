@@ -11,7 +11,6 @@ repos=(
     "git@github.com:bnelair/mef_tools.git"
 )
 
-
 DIR_TMP="$RDIR/tmp"
 DIR_CLONE="${DIR_TMP}/clone"
 DIR_CODE="${DIR_TMP}/codes"
@@ -98,8 +97,6 @@ for i in "${!repos[@]}"; do
 
         cp "$RDM_SRC" "$RDM_DST"
         echo "Copied $RDM_SRC to $RDM_DST."
-
-
 
         # Navigate back to the temporary clone directory's parent
         cd - > /dev/null

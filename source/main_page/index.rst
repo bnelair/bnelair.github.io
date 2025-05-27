@@ -8,9 +8,9 @@ Bioelectronics Neuropysiology and Engineering Lab (BNEL)
 ########################################################
 
 
-This is the central documentation for software tools developed in our Bioelectronics Neuropysiology and Engineering
-Lab (BNEL) at Mayo Clinic.
-The tools are designed to facilitate the analysis of brain electrophysiology, behavior, and dynamics.
+This is the central documentation hub for software tools developed in the Bioelectronics Neuropysiology and Engineering
+Lab (BNEL) at Mayo Clinic. The tools are designed to facilitate the analysis of brainelectrophysiology, behavior,
+and dynamics.
 
 .. toctree::
    :maxdepth: 1
@@ -38,7 +38,10 @@ The tools are designed to facilitate the analysis of brain electrophysiology, be
 
       Code examples and links to papers from the Bioelectronics Neuropysiology and Engineering Lab (BNEL) at Mayo Clinic.
 
-.. include:: ../../README.md
-   :parser: markdown
+Read Me - TBD
+"""""""""""""""
+
+There will be information about the lab, how to contribute, project funding, project list, maybe members?
+
 
 
