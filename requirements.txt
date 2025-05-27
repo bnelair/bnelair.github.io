@@ -1,5 +1,5 @@
 sphinx
-sphinx_book_theme
-
-brainmaze_zmq
-brainmaze_utils
+sphinx-multiproject
+sphinx-book-theme
+sphinx-design
+myst-parser
