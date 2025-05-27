@@ -41,8 +41,6 @@ for i in "${!repos[@]}"; do
 
     echo "Processing repository: $REPO_NAME"
 
-
-
     if git clone "$REPO_URL" "$DIR_CLONE/$REPO_NAME"; then
         echo "Cloned $REPO_NAME successfully."
 
