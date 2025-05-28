@@ -10,6 +10,7 @@ extensions = [
 ]
 
 project = 'MEF Tools'
+author = 'Bioelectronics Neurophysiology & Engineering Lab - Filip Mivalt, M.Sc., Ph.D., Vladimir Sladky, M.Sc. & Vaclav Kremen M.Sc., Ph.D., MBA'
 html_title = 'MEF Tools'
 html_short_title = 'MEF Tools Docs'
 html_logo = "../../img/logo_bnel.png"

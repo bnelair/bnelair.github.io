@@ -10,6 +10,7 @@ extensions = [
 ]
 
 project = 'BNEL - Main Page'
+author = 'Bioelectronics Neurophysiology & Engineering Lab'
 html_title = 'BNEL - Main Page'
 html_short_title = 'BNEL - Main Page'
 html_logo = "../../img/logo_bnel.png"
@@ -34,6 +35,7 @@ html_theme_options = {
 version = '0.0.1'
 release = '0.0.1'
 language = 'en'
+
 autosectionlabel_prefix_document = True
 
 # source_suffix = ['.rst', '.md']

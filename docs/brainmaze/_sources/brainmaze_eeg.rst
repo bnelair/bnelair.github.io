@@ -3,7 +3,7 @@ brainmaze_eeg
 
 .. include:: ../../tmp/rdm/brainmaze_eeg.rst
 
-BrainMaze ZMQ Modules
+BrainMaze EEG Modules
 """"""""""""""""""""""""""
 
 .. toctree::

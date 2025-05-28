@@ -3,8 +3,8 @@ brainmaze_utils
 
 .. include:: ../../tmp/rdm/brainmaze_utils.rst
 
-BrainMaze Packages
-""""""""""""""""""""
+BrainMaze Utils Modules
+""""""""""""""""""""""""""
 
 .. toctree::
    :maxdepth: 1

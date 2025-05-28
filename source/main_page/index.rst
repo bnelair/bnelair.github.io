@@ -3,7 +3,7 @@
    :width: 30px
    :align: middle
 
-.. include:: ./README.md
+.. include:: ./CONTENT.md
    :parser: markdown
 
 .. toctree::

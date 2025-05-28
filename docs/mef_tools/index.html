@@ -345,13 +345,14 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cite">Cite</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appending-data-to-an-existing-mef-file">Appending Data to an Existing MEF File</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-new-segment-in-the-mef-file">Creating a New Segment in the MEF File</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-annotations-to-the-mef-file">Writing Annotations to the MEF File</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-from-mef-file">Reading from MEF File</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-annotations-to-the-mef-file">Writing Annotations to the MEF File</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-from-an-mef-file">Reading from an MEF File</a><ul class="nav section-nav flex-column">
 </ul>
 </li>
 </ul>
@@ -385,9 +386,6 @@ document.write(`
 <p><a class="reference external" href="https://doi.org/10.1016%2Fj.jneumeth.2009.03.022">Multiscale Electrophysiology Format (MEF)</a> is a specialized file format designed for storing electrophysiological data. This format is capable of storing multiple channels of data in a single file, with each channel storing a time series of data points.</p>
 <p>MEF is particularly useful for handling large volumes of electrophysiological data, as it employs a variety of techniques such as lossless and lossy compression, data encryption and data de-identification to make the storage and transmission of such data more efficient and secure.</p>
 <p>Python’s pymef library provides a set of tools for working with MEF files, including reading from and writing to these files. Below are examples demonstrating the use of these tools.</p>
-<ul class="simple">
-<li><p>BH Brinkmann et al., “Large-scale electrophysiology: acquisition, compression, encryption, and storage of big data,“ J. Neurosci Methods. 2009;180(1):185‐192. doi:10.1016/j.jneumeth.2009.03.022</p></li>
-</ul>
 </section>
 <section id="dependencies">
 <h1>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">#</a></h1>
@@ -406,61 +404,14 @@ document.write(`
 <h1>License<a class="headerlink" href="#license" title="Link to this heading">#</a></h1>
 <p>This software is licensed under the Apache-2.0 License. See <a class="reference external" href="https://github.com/xmival00/MEF_Tools/blob/master/LICENSE">LICENSE</a> file in the root directory of this project.</p>
 </section>
-<section id="cite">
-<h1>Cite<a class="headerlink" href="#cite" title="Link to this heading">#</a></h1>
-<p>This toolbox was developed as a part of the following projects. When use whole, parts, or are inspired by, we appreciate you acknowledge and refer these journal papers:</p>
+<section id="reference">
+<h1>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h1>
 <ul class="simple">
-<li><ol class="upperalpha simple" start="22">
-<li><p>Sladky et al., “Distributed brain co-processor for tracking spikes, seizures and behaviour during electrical brain stimulation,” Brain Commun., vol. 4, no. 3, May 2022, doi: 10.1093/braincomms/fcac115.</p></li>
-</ol>
-</li>
-<li><ol class="upperalpha simple" start="6">
-<li><p>Mivalt et al., “Electrical brain stimulation and continuous behavioral state tracking in ambulatory humans,” J. Neural Eng., vol. 19, no. 1, p. 016019, Feb. 2022, doi: 10.1088/1741-2552/ac4bfd.</p></li>
-</ol>
-</li>
+<li><p>Brinkmann BH, Bower MR, Stengel KA, Worrell GA, Stead M. Large-scale electrophysiology: acquisition, compression, encryption, and storage of big data. J Neurosci Methods. 2009;180(1):185‐192. doi:10.1016/j.jneumeth.2009.03.022</p></li>
 </ul>
 </section>
-<section id="example-1">
-<h1>Example 1<a class="headerlink" href="#example-1" title="Link to this heading">#</a></h1>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">mef_tools.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">MefWriter</span><span class="p">,</span> <span class="n">MefReader</span>
-
-<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/mnt/some/path/mef_test.mefd&#39;</span> <span class="c1"># Update this !!!</span>
-<span class="n">password_write</span> <span class="o">=</span> <span class="s1">&#39;pwd_write&#39;</span>
-<span class="n">password_read</span> <span class="o">=</span> <span class="s1">&#39;pwd_read&#39;</span>
-
-
-<span class="n">chnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;test_channel_1&#39;</span><span class="p">,</span> <span class="s1">&#39;test_channel_2&#39;</span><span class="p">]</span>
-<span class="n">fsamp</span> <span class="o">=</span> <span class="mi">1000</span> <span class="c1"># Hz</span>
-<span class="n">start</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">timestamp</span><span class="p">()</span>
-<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">fsamp</span><span class="o">*</span><span class="mi">3600</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">fsamp</span><span class="o">*</span><span class="mi">3600</span><span class="p">)]</span>
-
-<span class="n">Wrt</span> <span class="o">=</span> <span class="n">MefWriter</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">password1</span><span class="o">=</span><span class="n">password_write</span><span class="p">,</span> <span class="n">password2</span><span class="o">=</span><span class="n">password_read</span><span class="p">)</span> <span class="c1"># if overwrite is True, any file with the same name will be overwritten, otherwise the data is appended to the existing file</span>
-<span class="n">Wrt</span><span class="o">.</span><span class="n">mef_block_len</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fsamp</span><span class="p">)</span>
-<span class="n">Wrt</span><span class="o">.</span><span class="n">max_nans_written</span> <span class="o">=</span> <span class="mi">0</span>
-
-
-<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">chnames</span><span class="p">))):</span>
-    <span class="n">x_</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
-    <span class="n">Wrt</span><span class="o">.</span><span class="n">write_data</span><span class="p">(</span><span class="n">x_</span><span class="p">,</span> <span class="n">ch</span><span class="p">,</span> <span class="n">start_uutc</span><span class="o">=</span><span class="n">start</span> <span class="o">*</span> <span class="mf">1e6</span><span class="p">,</span> <span class="n">sampling_freq</span><span class="o">=</span><span class="n">fsamp</span><span class="p">,</span> <span class="n">reload_metadata</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="p">)</span>
-
-
-<span class="n">Rdr</span> <span class="o">=</span> <span class="n">MefReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">password_read</span><span class="p">)</span>
-<span class="n">channels_read</span> <span class="o">=</span> <span class="n">Rdr</span><span class="o">.</span><span class="n">channels</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All properties&quot;</span><span class="p">,</span> <span class="n">Rdr</span><span class="o">.</span><span class="n">properties</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sampling rate for channel </span><span class="si">{</span><span class="n">channels_read</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">Rdr</span><span class="o">.</span><span class="n">get_property</span><span class="p">(</span><span class="s1">&#39;fsamp&#39;</span><span class="p">,</span> <span class="n">channels_read</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="n">x_read</span> <span class="o">=</span> <span class="n">Rdr</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">channels_read</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># read full length length</span>
-<span class="n">x_read_1s</span> <span class="o">=</span> <span class="n">Rdr</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">channels_read</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">start</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="p">(</span><span class="n">start</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span> <span class="c1"># read 1 second - reading limited data is useful for really huge files.</span>
-</pre></div>
-</div>
-<p>See more <a class="reference external" href="https://github.com/mselair/mef_tools/tree/master/examples">examples</a>.</p>
-</section>
-<section id="example-2">
-<h1>Example 2<a class="headerlink" href="#example-2" title="Link to this heading">#</a></h1>
-<p>See more <a class="reference external" href="https://github.com/mselair/mef_tools/tree/master/examples">examples</a>.</p>
+<section id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h1>
 <p>First, we need to import the necessary libraries:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
@@ -522,8 +473,9 @@ document.write(`
 </pre></div>
 </div>
 </section>
+</section>
 <section id="writing-annotations-to-the-mef-file">
-<h2>Writing Annotations to the MEF File<a class="headerlink" href="#writing-annotations-to-the-mef-file" title="Link to this heading">#</a></h2>
+<h1>Writing Annotations to the MEF File<a class="headerlink" href="#writing-annotations-to-the-mef-file" title="Link to this heading">#</a></h1>
 <p>Annotations can also be added to the MEF file at both the session and channel levels. Here’s an example of how to do this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">start_time</span> <span class="o">=</span> <span class="n">start_time</span>
 <span class="n">end_time</span> <span class="o">=</span> <span class="n">start_time</span> <span class="o">+</span> <span class="mf">1e6</span> <span class="o">*</span> <span class="mi">300</span>
@@ -542,23 +494,9 @@ document.write(`
 <span class="n">Wrt2</span><span class="o">.</span><span class="n">write_annotations</span><span class="p">(</span><span class="n">note_annotations</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">channel</span> <span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="reading-from-mef-file">
-<h2>Reading from MEF File<a class="headerlink" href="#reading-from-mef-file" title="Link to this heading">#</a></h2>
+<section id="reading-from-an-mef-file">
+<h2>Reading from an MEF File<a class="headerlink" href="#reading-from-an-mef-file" title="Link to this heading">#</a></h2>
 <p>In this example, we create a MefReader instance, print out the properties of the MEF file, and then read the first 10 seconds of data from each channel. The data from each channel is appended to a list.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Reader</span> <span class="o">=</span> <span class="n">MefReader</span><span class="p">(</span><span class="n">session_path</span><span class="p">,</span> <span class="n">password2</span><span class="o">=</span><span class="n">pass2</span><span class="p">)</span>
-<span class="n">signals</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="n">properties</span> <span class="o">=</span> <span class="n">Reader</span><span class="o">.</span><span class="n">properties</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">properties</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">channel</span> <span class="ow">in</span> <span class="n">Reader</span><span class="o">.</span><span class="n">channels</span><span class="p">:</span>
-    <span class="n">start_time</span> <span class="o">=</span> <span class="n">Reader</span><span class="o">.</span><span class="n">get_property</span><span class="p">(</span><span class="s1">&#39;start_time&#39;</span><span class="p">,</span> <span class="n">channel</span><span class="p">)</span>
-    <span class="n">end_time</span> <span class="o">=</span> <span class="n">Reader</span><span class="o">.</span><span class="n">get_property</span><span class="p">(</span><span class="s1">&#39;end_time&#39;</span><span class="p">,</span> <span class="n">channel</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">Reader</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">start_time</span><span class="o">+</span><span class="mi">10</span><span class="o">*</span><span class="mf">1e6</span><span class="p">)</span>
-    <span class="n">signals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Home</span></p>
 <ul>
@@ -660,13 +598,14 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cite">Cite</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2">Example 2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appending-data-to-an-existing-mef-file">Appending Data to an Existing MEF File</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-new-segment-in-the-mef-file">Creating a New Segment in the MEF File</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-annotations-to-the-mef-file">Writing Annotations to the MEF File</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-from-mef-file">Reading from MEF File</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-annotations-to-the-mef-file">Writing Annotations to the MEF File</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-from-an-mef-file">Reading from an MEF File</a><ul class="nav section-nav flex-column">
 </ul>
 </li>
 </ul>
@@ -686,7 +625,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-By Author name not set
+By Bioelectronics Neurophysiology & Engineering Lab - Filip Mivalt, M.Sc., Ph.D., Vladimir Sladky, M.Sc. & Vaclav Kremen M.Sc., Ph.D., MBA
 </p>
 
   </div>

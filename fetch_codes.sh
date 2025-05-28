@@ -2,13 +2,12 @@
 
 RDIR=$(pwd)
 
-USE_BRANCH=""
-
 repos=(
-    "git@github.com:bnelair/brainmaze_eeg.git"
-    "git@github.com:bnelair/brainmaze_utils.git"
-    "git@github.com:bnelair/brainmaze_zmq.git"
-    "git@github.com:bnelair/mef_tools.git"
+    "git@github.com:bnelair/brainmaze_eeg.git|fmivalt/intergation"
+    "git@github.com:bnelair/brainmaze_utils.git|fmivalt/intergation"
+    "git@github.com:bnelair/brainmaze_zmq.git|fmivalt/intergation"
+    "git@github.com:bnelair/brainmaze_torch.git|fmivalt/intergation"
+    "git@github.com:bnelair/mef_tools.git|fmivalt/intergation"
 )
 
 DIR_TMP="$RDIR/tmp"
@@ -22,7 +21,8 @@ mkdir -p "$DIR_CODE"
 mkdir -p "$DIR_RDM"
 
 for i in "${!repos[@]}"; do
-    REPO_URL="${repos[$i]}"
+    REPO_URL=$(echo "${repos[$i]}" | cut -d'|' -f1)
+    USE_BRANCH=$(echo "${repos[$i]}" | cut -d'|' -f2)
     REPO_NAME=$(basename "$REPO_URL" .git)
 
     DIR_SRC_CODE=${DIR_CLONE}/$REPO_NAME/$REPO_NAME
@@ -43,6 +43,7 @@ for i in "${!repos[@]}"; do
     echo "Processing repository: $REPO_NAME"
 
     if git clone "$REPO_URL" "$DIR_CLONE/$REPO_NAME"; then
+
         echo "Cloned $REPO_NAME successfully."
 
         # Navigate into the cloned repository directory
@@ -55,19 +56,8 @@ for i in "${!repos[@]}"; do
             pip install . || { echo "Error: Failed to install $REPO_NAME"; exit 1; }
         fi
 
-        # Checkout the main branch (or 'master', adjust if needed)
-        # Check if 'main' branch exists, otherwise try 'master'
-#        if git rev-parse --verify main >/dev/null 2>&1; then
-#            git checkout $USE_BRANCH
-#            echo "Checked out 'main' branch."
-#        else
-#            echo "Warning: Neither 'main' nor '$USE_BRANCH' branch found for $REPO_NAME. Skipping."
-#            cd - > /dev/null # Navigate back to the previous directory
-#            rm -rf "${DIR_CLONE}/$REPO_NAME"
-#            continue # Skip to the next repository
-#        fi
-
       if [ -z "$USE_BRANCH" ]; then
+          # This logic for the default branch is fine
           if git rev-parse --verify main >/dev/null 2>&1; then
               git checkout main
               echo "Checked out 'main' branch."
@@ -76,19 +66,21 @@ for i in "${!repos[@]}"; do
               echo "Checked out 'master' branch."
           else
               echo "Warning: Neither 'main' nor 'master' branch found for $REPO_NAME. Skipping."
-              cd - > /dev/null # Navigate back to the previous directory
-              rm -rf "${DIR_CLONE}/$REPO_NAME"
-              continue # Skip to the next repository
+              cd ..
+              rm -rf "$REPO_NAME"
+              continue
           fi
       else
-          if git rev-parse --verify "$USE_BRANCH" >/dev/null 2>&1; then
+          # CORRECTED LOGIC: Check for the remote branch first
+          if git show-ref --quiet --verify "refs/remotes/origin/$USE_BRANCH"; then
+              # If the remote branch exists, checkout will create the local one
               git checkout "$USE_BRANCH"
               echo "Checked out '$USE_BRANCH' branch."
           else
-              echo "Warning: Branch '$USE_BRANCH' not found for $REPO_NAME. Skipping."
-              cd - > /dev/null # Navigate back to the previous directory
-              rm -rf "${DIR_CLONE}/$REPO_NAME"
-              continue # Skip to the next repository
+              echo "Warning: Branch '$USE_BRANCH' not found in remote repository $REPO_NAME. Skipping."
+              cd ..
+              rm -rf "$REPO_NAME"
+              continue
           fi
       fi
 
@@ -111,5 +103,8 @@ for i in "${!repos[@]}"; do
 
     echo "---"
 done
+
+
+
 
 

@@ -1,5 +1,5 @@
 
-.. include:: ./README.md
+.. include:: ./CONTENT.md
    :parser: markdown
 
 
@@ -14,9 +14,10 @@
    :maxdepth: 4
    :caption: Python Packages
 
-   brainmaze_zmq
-   brainmaze_utils
    brainmaze_eeg
+   brainmaze_torch
+   brainmaze_utils
+   brainmaze_zmq
 
 
 
