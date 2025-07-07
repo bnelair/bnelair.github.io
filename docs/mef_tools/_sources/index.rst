@@ -1,5 +1,5 @@
 
-.. include:: ../../tmp/rdm/mef_tools.rst
+.. include:: ../../tmp/rdm/mef_tools.md
 
 .. toctree::
    :maxdepth: 1

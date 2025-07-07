@@ -1,7 +1,7 @@
 brainmaze_utils
 ===================
 
-.. include:: ../../tmp/rdm/brainmaze_utils.rst
+.. include:: ../../tmp/rdm/brainmaze_utils.md
 
 BrainMaze Utils Modules
 """"""""""""""""""""""""""

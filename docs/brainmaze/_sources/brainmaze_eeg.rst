@@ -1,7 +1,7 @@
 brainmaze_eeg
 ===================
 
-.. include:: ../../tmp/rdm/brainmaze_eeg.rst
+.. include:: ../../tmp/rdm/brainmaze_eeg.md
 
 BrainMaze EEG Modules
 """"""""""""""""""""""""""

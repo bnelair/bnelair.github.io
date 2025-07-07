@@ -1,7 +1,7 @@
 brainmaze_zmq
 ===================
 
-.. include:: ../../tmp/rdm/brainmaze_zmq.rst
+.. include:: ../../tmp/rdm/brainmaze_zmq.md
 
 BrainMaze ZMQ Modules
 """"""""""""""""""""""""""

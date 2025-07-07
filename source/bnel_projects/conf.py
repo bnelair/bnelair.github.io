@@ -1,5 +1,9 @@
 # docs/source/bnel_projects/conf.py
 
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../../tmp/codes'))
+
 extensions = [
     'sphinx.ext.intersphinx',
     'sphinx_design',

@@ -160,7 +160,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    MEF_Tools
+                    <no title>
                 </a>
             </li>
         </ul>
@@ -173,7 +173,6 @@
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">mef_tools</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
-
 
 </ul>
 
@@ -377,13 +376,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.voss"><code class="docutils literal notranslate"><span class="pre">voss()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mef-tools-client">mef_tools.client</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mef-tools-server">mef_tools.server</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mef-tools-db">mef_tools.db</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#readmeme">ReadmeMe</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#license">LICENSE</a></li>
 </ul>
 
             </nav>
@@ -926,52 +921,136 @@ rcols: number of random sources to add</p>
 </dd></dl>
 
 </section>
-<hr class="docutils" />
-<section id="mef-tools-client">
-<h2>mef_tools.client<a class="headerlink" href="#mef-tools-client" title="Link to this heading">#</a></h2>
 </section>
-<hr class="docutils" />
-<section id="mef-tools-server">
-<h2>mef_tools.server<a class="headerlink" href="#mef-tools-server" title="Link to this heading">#</a></h2>
-</section>
-<hr class="docutils" />
-<section id="mef-tools-db">
-<h2>mef_tools.db<a class="headerlink" href="#mef-tools-db" title="Link to this heading">#</a></h2>
-</section>
-</section>
-<hr class="docutils" />
 <section id="readmeme">
 <h1>ReadmeMe<a class="headerlink" href="#readmeme" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
-</section>
-<hr class="docutils" />
-<section id="license">
-<h1>LICENSE<a class="headerlink" href="#license" title="Link to this heading">#</a></h1>
-<p>BSD 3-Clause License</p>
-<p>Copyright (c) 2024, Bioelectronics Engineering and Electrophysiology Lab - Mayo Clinic</p>
-<p>Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:</p>
-<ol class="arabic simple">
-<li><p>Redistributions of source code must retain the above copyright notice, this
-list of conditions and the following disclaimer.</p></li>
-<li><p>Redistributions in binary form must reproduce the above copyright notice,
-this list of conditions and the following disclaimer in the documentation
-and/or other materials provided with the distribution.</p></li>
-<li><p>Neither the name of the copyright holder nor the names of its
-contributors may be used to endorse or promote products derived from
-this software without specific prior written permission.</p></li>
-</ol>
-<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS”
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
-<hr class="docutils" />
+<p>[![Build Status](<a class="github reference external" href="https://github.com/mselair/mef_tools/actions/workflows/test_publish.yml/badge.svg)](https://pypi.org/project/mef-tools/">mselair/mef_tools</a>)
+[![Documentation Status](<a class="reference external" href="https://readthedocs.org/projects/mef-tools/badge/?version=latest)](https://mef-tools.readthedocs.io/en/latest/">https://readthedocs.org/projects/mef-tools/badge/?version=latest)](https://mef-tools.readthedocs.io/en/latest/</a>?badge=latest)
+[![Python Versions](<a class="reference external" href="https://img.shields.io/pypi/pyversions/Django)](https://pypi.org/project/mef-tools/">https://img.shields.io/pypi/pyversions/Django)](https://pypi.org/project/mef-tools/</a>)
+[![Platform](<a class="reference external" href="https://img.shields.io/badge/platform-windows%20%7C%20macos%20%7C%20linux-lightgrey)](https://pypi.org/project/mef-tools/">https://img.shields.io/badge/platform-windows%20%7C%20macos%20%7C%20linux-lightgrey)](https://pypi.org/project/mef-tools/</a>)</p>
+<p># MEF_Tools</p>
+<p>This package provides tools for easier [Multiscale Electrophysiology Format (MEF)](<a class="reference external" href="https://doi.org/10.1016%2Fj.jneumeth.2009.03.022">https://doi.org/10.1016%2Fj.jneumeth.2009.03.022</a>) data saving and reading. See the example below and [documentation](<a class="reference external" href="https://mef-tools.readthedocs.io/en/latest/?badge=latest">https://mef-tools.readthedocs.io/en/latest/?badge=latest</a>).</p>
+<p>## Multiscale Electrophysiology Format (MEF)</p>
+<p>[Multiscale Electrophysiology Format (MEF)](<a class="reference external" href="https://doi.org/10.1016%2Fj.jneumeth.2009.03.022">https://doi.org/10.1016%2Fj.jneumeth.2009.03.022</a>) is a specialized file format designed for storing electrophysiological data. This format is capable of storing multiple channels of data in a single file, with each channel storing a time series of data points.</p>
+<p>MEF is particularly useful for handling large volumes of electrophysiological data, as it employs a variety of techniques such as lossless and lossy compression, data encryption and data de-identification to make the storage and transmission of such data more efficient and secure.</p>
+<p>Python’s pymef library provides a set of tools for working with MEF files, including reading from and writing to these files. Below are examples demonstrating the use of these tools.</p>
+<p>## Dependencies
+- [meflib](<a class="github reference external" href="https://github.com/msel-source/meflib">msel-source/meflib</a>) - binaries are included in the pymef package
+- [pymef](<a class="github reference external" href="https://github.com/msel-source/pymef">msel-source/pymef</a>)
+- [numpy](<a class="reference external" href="https://numpy.org/">https://numpy.org/</a>)
+- [pandas](<a class="reference external" href="https://pandas.pydata.org/">https://pandas.pydata.org/</a>)</p>
+<p>## Installation</p>
+<p>See installation instructions [INSTALL.md](INSTALL.md).</p>
+<p>## License</p>
+<p>This software is licensed under the Apache-2.0 License. See [LICENSE](<a class="github reference external" href="https://github.com/xmival00/MEF_Tools/blob/master/LICENSE">xmival00/MEF_Tools</a>) file in the root directory of this project.</p>
+<p>## Reference</p>
+<ul class="simple">
+<li><p>Brinkmann BH, Bower MR, Stengel KA, Worrell GA, Stead M. Large-scale electrophysiology: acquisition, compression, encryption, and storage of big data. J Neurosci Methods. 2009;180(1):185‐192. doi:10.1016/j.jneumeth.2009.03.022</p></li>
+</ul>
+<p>## Examples</p>
+<p>First, we need to import the necessary libraries:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">import</span> <span class="pre">os</span>
+<span class="pre">import</span> <span class="pre">time</span>
+<span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span>
+<span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span>
+<span class="pre">from</span> <span class="pre">mef_tools.io</span> <span class="pre">import</span> <span class="pre">MefWriter,</span> <span class="pre">MefReader,</span> <span class="pre">create_pink_noise</span>
+<span class="pre">`</span></code></p>
+<p>Next, we define the path to our MEF file, and the amount of data (in seconds) we want to write:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">session_name</span> <span class="pre">=</span> <span class="pre">'session'</span>
+<span class="pre">session_path</span> <span class="pre">=</span> <span class="pre">os.getcwd()</span> <span class="pre">+</span> <span class="pre">f'/{session_name}.mefd'</span>
+<span class="pre">mef_session_path</span> <span class="pre">=</span> <span class="pre">session_path</span>
+<span class="pre">secs_to_write</span> <span class="pre">=</span> <span class="pre">30</span>
+<span class="pre">`</span></code></p>
+<p>We also need to specify the start and end times of our data in uUTC time. uUTC time is the number of microseconds since January 1, 1970, 00:00:00 UTC. We can use the [time](<a class="reference external" href="https://docs.python.org/3/library/time.html">https://docs.python.org/3/library/time.html</a>) library to convert between UTC time and other time formats. In this example, we will use the current time as the start time, and the start time plus the number of seconds we want to write as the end time:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">start_time</span> <span class="pre">=</span> <span class="pre">int(time.time()</span> <span class="pre">*</span> <span class="pre">1e6)</span>
+<span class="pre">end_time</span> <span class="pre">=</span> <span class="pre">int(start_time</span> <span class="pre">+</span> <span class="pre">1e6*secs_to_write)</span>
+<span class="pre">`</span></code></p>
+<p>With our file path and timing details set, we can now create our MEFWriter instance:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">pass1</span> <span class="pre">=</span> <span class="pre">'pass1'</span> <span class="pre">#</span> <span class="pre">password</span> <span class="pre">needed</span> <span class="pre">for</span> <span class="pre">writing</span> <span class="pre">to</span> <span class="pre">file</span>
+<span class="pre">pass2</span> <span class="pre">=</span> <span class="pre">'pass2'</span> <span class="pre">#</span> <span class="pre">password</span> <span class="pre">needed</span> <span class="pre">for</span> <span class="pre">every</span> <span class="pre">read/write</span> <span class="pre">operation</span>
+<span class="pre">Wrt</span> <span class="pre">=</span> <span class="pre">MefWriter(session_path,</span> <span class="pre">overwrite=True,</span> <span class="pre">password1=pass1,</span> <span class="pre">password2=pass2)</span>
+<span class="pre">Wrt.max_nans_written</span> <span class="pre">=</span> <span class="pre">0</span>
+<span class="pre">Wrt.data_units</span> <span class="pre">=</span> <span class="pre">'mV'</span>
+<span class="pre">`</span></code></p>
+<p>We then create some test data to write to our file:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">fs</span> <span class="pre">=</span> <span class="pre">500</span>
+<span class="pre">low_b</span> <span class="pre">=</span> <span class="pre">-10</span>
+<span class="pre">up_b</span> <span class="pre">=</span> <span class="pre">10</span>
+<span class="pre">data_to_write</span> <span class="pre">=</span> <span class="pre">create_pink_noise(fs,</span> <span class="pre">secs_to_write,</span> <span class="pre">low_b,</span> <span class="pre">up_b)</span>
+<span class="pre">`</span></code></p>
+<p>This data is written to a channel in our MEF file:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">channel</span> <span class="pre">=</span> <span class="pre">'channel_1'</span>
+<span class="pre">precision</span> <span class="pre">=</span> <span class="pre">3</span>
+<span class="pre">Wrt.write_data(data_to_write,</span> <span class="pre">channel,</span> <span class="pre">start_time,</span> <span class="pre">fs,</span> <span class="pre">precision=precision)</span>
+<span class="pre">`</span></code></p>
+<p>## Appending Data to an Existing MEF File</p>
+<p>To append data to an existing MEF file, we first need to create a new writer:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">secs_to_append</span> <span class="pre">=</span> <span class="pre">5</span>
+<span class="pre">discont_length</span> <span class="pre">=</span> <span class="pre">3</span>
+<span class="pre">append_time</span> <span class="pre">=</span> <span class="pre">end_time</span> <span class="pre">+</span> <span class="pre">int(discont_length*1e6)</span>
+<span class="pre">append_end</span> <span class="pre">=</span> <span class="pre">append_time</span> <span class="pre">+</span> <span class="pre">1e6*secs_to_append</span>
+<span class="pre">data</span> <span class="pre">=</span> <span class="pre">create_pink_noise(fs,</span> <span class="pre">secs_to_append,</span> <span class="pre">low_b,</span> <span class="pre">up_b)</span>
+<span class="pre">Wrt2</span> <span class="pre">=</span> <span class="pre">MefWriter(session_path,</span> <span class="pre">overwrite=False,</span> <span class="pre">password1=pass1,</span> <span class="pre">password2=pass2)</span>
+<span class="pre">Wrt2.write_data(data,</span> <span class="pre">channel,</span> <span class="pre">append_time,</span> <span class="pre">fs)</span>
+<span class="pre">`</span></code></p>
+<p>## Creating a New Segment in the MEF File</p>
+<p>To create a new segment, we simply need to change the new_segment flag to True:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">secs_to_write_seg2</span> <span class="pre">=</span> <span class="pre">10</span>
+<span class="pre">gap_time</span> <span class="pre">=</span> <span class="pre">3.36*1e6</span>
+<span class="pre">newseg_time</span> <span class="pre">=</span> <span class="pre">append_end</span> <span class="pre">+</span> <span class="pre">int(gap_time)</span>
+<span class="pre">newseg_end</span> <span class="pre">=</span> <span class="pre">newseg_time</span> <span class="pre">+</span> <span class="pre">1e6*secs_to_write_seg2</span>
+<span class="pre">data</span> <span class="pre">=</span> <span class="pre">create_pink_noise(fs,</span> <span class="pre">secs_to_write_seg2,</span> <span class="pre">low_b,</span> <span class="pre">up_b)</span>
+<span class="pre">data[30:540]</span> <span class="pre">=</span> <span class="pre">np.nan</span>
+<span class="pre">data[660:780]</span> <span class="pre">=</span> <span class="pre">np.nan</span>
+<span class="pre">Writer2.write_data(data,</span> <span class="pre">channel,</span> <span class="pre">newseg_time,</span> <span class="pre">fs,</span> <span class="pre">new_segment=True)</span>
+<span class="pre">`</span></code></p>
+<p>We can also write data to a new channel with inferred precision:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">channel</span> <span class="pre">=</span> <span class="pre">'channel_2'</span>
+<span class="pre">Wrt2.write_data(data,</span> <span class="pre">channel,</span> <span class="pre">newseg_time,</span> <span class="pre">fs,</span> <span class="pre">new_segment=True)</span>
+<span class="pre">`</span></code></p>
+<p>## Writing Annotations to the MEF File</p>
+<p>Annotations can also be added to the MEF file at both the session and channel levels. Here’s an example of how to do this:</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>python
+start_time = start_time
+end_time = start_time + 1e6 * 300
+offset = start_time - 1e6
+starts = np.arange(start_time, end_time, 2e6)
+text = [‘test’] * len(starts)
+types = [‘Note’] * len(starts)
+note_annotations = pd.DataFrame(data={‘time’: starts, ‘text’: text, ‘type’: types})
+Wrt2.write_annotations(note_annotations)</p>
+<p>starts = np.arange(start_time, end_time, 1e5)
+text = [‘test’] * len(starts)
+types = [‘EDFA’] * len(starts)
+duration = [10025462] * len(starts)
+note_annotations = pd.DataFrame(data={‘time’: starts, ‘text’: text, ‘type’: types, ‘duration’:duration})
+Wrt2.write_annotations(note_annotations, channel=channel )
+<a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<p>## Reading from an MEF File</p>
+<p>In this example, we create a MefReader instance, print out the properties of the MEF file, and then read the first 10 seconds of data from each channel. The data from each channel is appended to a list.</p>
+<p><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a>python
+Reader = MefReader(session_path, password2=pass2)
+signals = []</p>
+<p>properties = Reader.properties
+print(properties)</p>
+<dl class="simple">
+<dt>for channel in Reader.channels:</dt><dd><p>start_time = Reader.get_property(‘start_time’, channel)
+end_time = Reader.get_property(‘end_time’, channel)
+x = Reader.get_data(channel, start_time, start_time+10*1e6)
+signals.append(x)</p>
+</dd>
+</dl>
+<p><a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a></p>
 </section>
 
 
@@ -1049,13 +1128,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mef_tools.io.voss"><code class="docutils literal notranslate"><span class="pre">voss()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mef-tools-client">mef_tools.client</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mef-tools-server">mef_tools.server</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mef-tools-db">mef_tools.db</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#readmeme">ReadmeMe</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#license">LICENSE</a></li>
 </ul>
 
   </nav></div>

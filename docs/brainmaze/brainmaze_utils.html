@@ -206,6 +206,11 @@
 <li class="toctree-l2"><a class="reference internal" href="zmq/utils.html">utils</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="brainmaze_bci2000.html">brainmaze_bci2000</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="bci2000/bci2000.html">bci2000</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bci2000/bids.html">bids</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -369,15 +374,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brainmaze-brain-electrophysiology-behavior-and-dynamics-analysis-toolbox-utils">BrainMaze: Brain Electrophysiology, Behavior and Dynamics Analysis Toolbox - Utils</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-contribute">How to contribute</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgment">Acknowledgment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brainmaze-utils-modules">BrainMaze Utils Modules</a></li>
 </ul>
             </nav>
@@ -392,53 +388,6 @@ document.write(`
                   
   <section id="brainmaze-utils">
 <h1>brainmaze_utils<a class="headerlink" href="#brainmaze-utils" title="Link to this heading">#</a></h1>
-<section id="brainmaze-brain-electrophysiology-behavior-and-dynamics-analysis-toolbox-utils">
-<h2>BrainMaze: Brain Electrophysiology, Behavior and Dynamics Analysis Toolbox - Utils<a class="headerlink" href="#brainmaze-brain-electrophysiology-behavior-and-dynamics-analysis-toolbox-utils" title="Link to this heading">#</a></h2>
-<p>This toolbox provides a generic tools for the BrainMaze package. This tool was separated from the BrainMaze toolbox to support a convenient and lightweight sharing of these tools across projects.</p>
-<p>This project was originally developed as a part of the <a class="reference external" href="https://github.com/bnelair/best-toolbox">BEhavioral STate Analysis Toolbox (BEST)</a> project. However, the development has transferred to the BrainMaze project.</p>
-</section>
-<section id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h2>
-<p>Documentation is available <a class="reference external" href="https://bnelair.github.io/brainmaze_utils">here</a>.</p>
-</section>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>brainmaze-utils
-</pre></div>
-</div>
-</section>
-<section id="how-to-contribute">
-<h2>How to contribute<a class="headerlink" href="#how-to-contribute" title="Link to this heading">#</a></h2>
-<p>The project has 2 main protected branches <em>main</em> that contains official software releases and <em>dev</em> that contains the latest feature implementations shared with developers.
-To implement a new feature a new branch should be created from the <em>dev</em> branch with name pattern of <em>developer_identifier/feature_name</em>.</p>
-<p>After the feature is implemented, a pull request can be created to merge the feature branch into the <em>dev</em> branch with. Pull requests need to be reviewed by the code owners.
-Drafting of new releases will be performed by the code owners in using pull request from <em>dev</em> to <em>main</em> and drafting a new release on GitHub.</p>
-<p>New functions need to be implemented with Sphinx compatible docstrings. The documentation is automatically generated from the docstrings using Sphinx using make_docs.sh either calling its contents.
-Documentation source is in docs_src/ and the generated documentation is in docs/. .doctrees is not shared in the repository.</p>
-<section id="troubleshooting">
-<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h3>
-<p>If updating the docs web generated using sphinx, there might be a lot of changes resulting in a buffer hang up. Using SSH over HTTPS is preferred. If you are using HTTPS, you can increase the buffer size by running the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>http.postBuffer<span class="w"> </span><span class="m">524288000</span>
-</pre></div>
-</div>
-</section>
-</section>
-<section id="license">
-<h2>License<a class="headerlink" href="#license" title="Link to this heading">#</a></h2>
-<p>This software is licensed under BSD-3Clause license. For details see the <a class="reference external" href="https://github.com/bnelair/brainmaze_utils/blob/master/LICENSE">LICENSE</a> file in the root directory of this project.</p>
-</section>
-<section id="acknowledgment">
-<h2>Acknowledgment<a class="headerlink" href="#acknowledgment" title="Link to this heading">#</a></h2>
-<p>This code was developed and originally published for the first time with by (Mivalt 2022, and Sladky 2022).
-We appreciate you citing these papers when utilizing this toolbox in further research work.</p>
-<blockquote>
-<div><div class="line-block">
-<div class="line">F. Mivalt et V. Kremen et al., “Electrical brain stimulation and continuous behavioral state tracking in ambulatory humans,” J. Neural Eng., vol. 19, no. 1, p. 016019, Feb. 2022, doi: 10.1088/1741-2552/ac4bfd.</div>
-<div class="line"><br /></div>
-<div class="line">V. Sladky et al., “Distributed brain co-processor for tracking spikes, seizures and behaviour during electrical brain stimulation,” Brain Commun., vol. 4, no. 3, May 2022, doi: 10.1093/braincomms/fcac115.</div>
-</div>
-</div></blockquote>
-</section>
 <section id="brainmaze-utils-modules">
 <h2>BrainMaze Utils Modules<a class="headerlink" href="#brainmaze-utils-modules" title="Link to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
@@ -499,15 +448,6 @@ We appreciate you citing these papers when utilizing this toolbox in further res
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brainmaze-brain-electrophysiology-behavior-and-dynamics-analysis-toolbox-utils">BrainMaze: Brain Electrophysiology, Behavior and Dynamics Analysis Toolbox - Utils</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-contribute">How to contribute</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgment">Acknowledgment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brainmaze-utils-modules">BrainMaze Utils Modules</a></li>
 </ul>
   </nav></div>

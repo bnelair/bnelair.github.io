@@ -3,15 +3,16 @@
 RDIR=$(pwd)
 
 repos=(
-    "git@github.com:bnelair/brainmaze_eeg.git|fmivalt/intergation"
-    "git@github.com:bnelair/brainmaze_utils.git|fmivalt/intergation"
-    "git@github.com:bnelair/brainmaze_zmq.git|fmivalt/intergation"
-    "git@github.com:bnelair/brainmaze_torch.git|fmivalt/intergation"
-    "git@github.com:bnelair/mef_tools.git|fmivalt/intergation"
+    "git@github.com:bnelair/brainmaze_utils.git|fmivalt/integration"
+    "git@github.com:bnelair/brainmaze_zmq.git|fmivalt/integration"
+    "git@github.com:bnelair/brainmaze_torch.git|fmivalt/integration"
+    "git@github.com:bnelair/brainmaze_bci2000.git|main"
+    "git@github.com:bnelair/brainmaze_eeg.git|fmivalt/integration"
+    "git@github.com:bnelair/mef_tools.git|fmivalt/integration"
 )
 
 DIR_TMP="$RDIR/tmp"
-DIR_CLONE="${DIR_TMP}/clone"
+DIR_CLONE="${DIR_TMP}/clone"make
 DIR_CODE="${DIR_TMP}/codes"
 DIR_RDM="${DIR_TMP}/rdm"
 
@@ -28,8 +29,8 @@ for i in "${!repos[@]}"; do
     DIR_SRC_CODE=${DIR_CLONE}/$REPO_NAME/$REPO_NAME
     DIR_DST_CODE=${DIR_CODE}/$REPO_NAME
 
-    RDM_SRC=${DIR_CLONE}/$REPO_NAME/README.rst
-    RDM_DST=${DIR_RDM}/${REPO_NAME}.rst
+    RDM_SRC=${DIR_CLONE}/$REPO_NAME/README.md
+    RDM_DST=${DIR_RDM}/${REPO_NAME}.md
 
     echo $REPO_URL
     echo $REPO_NAME
@@ -53,7 +54,8 @@ for i in "${!repos[@]}"; do
         if [ -f "requirements.txt" ]; then
             echo "Installing requirements for $REPO_NAME."
             pip install -r requirements.txt || { echo "Error: Failed to install requirements for $REPO_NAME"; exit 1; }
-            pip install . || { echo "Error: Failed to install $REPO_NAME"; exit 1; }
+#            pip uninstall $REPO_NAME -y
+#            pip install . --force|| { echo "Error: Failed to install $REPO_NAME"; exit 1; }
         fi
 
       if [ -z "$USE_BRANCH" ]; then

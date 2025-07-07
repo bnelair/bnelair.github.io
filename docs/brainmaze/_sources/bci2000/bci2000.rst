@@ -1,0 +1,7 @@
+bci2000
+=============================
+
+.. automodule:: brainmaze_bci2000.bci2000
+   :members:
+   :undoc-members:
+

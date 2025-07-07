@@ -207,6 +207,11 @@
 <li class="toctree-l2"><a class="reference internal" href="zmq/utils.html">utils</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="brainmaze_bci2000.html">brainmaze_bci2000</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="bci2000/bci2000.html">bci2000</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bci2000/bids.html">bids</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -413,7 +418,7 @@ document.write(`
 processing of intracranial iEEG recordings to analyze epilepsy, sleep, and other brain state dynamics.
 The BrainMaze code has been divided into multiple separate packages to ensure modularity and ease of use. This is the
 main hub for the BrainMaze project, providing links to all submodules and containing documentation for the entire project.</p>
-<p>ocumentation to the whole BrainMaze project is available at <a class="reference external" href="https://bnelair.github.io/brainmaze/">https://bnelair.github.io/brainmaze/</a>.</p>
+<p>Documentation to the whole BrainMaze project is available at <a class="reference external" href="https://bnelair.github.io/brainmaze/">https://bnelair.github.io/brainmaze/</a>.</p>
 <p>This project was originally developed as a part of the
 <a class="reference external" href="https://github.com/bnelair/best-toolbox">BEhavioral STate Analysis Toolbox (BEST)</a> project. However, further development and support
 has transferred to the BrainMaze project.</p>
@@ -580,23 +585,21 @@ Using SSH over HTTPS is preferred. If you are using HTTPS, you can increase the 
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Packages</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="brainmaze_eeg.html">brainmaze_eeg</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_eeg.html#brainmaze-brain-electrophysiology-behavior-and-dynamics-analysis-toolbox-eeg">BrainMaze: Brain Electrophysiology, Behavior and Dynamics Analysis Toolbox - EEG</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_eeg.html#documentation">Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_eeg.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_eeg.html#how-to-contribute">How to contribute</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="brainmaze_eeg.html#troubleshooting">Troubleshooting</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_eeg.html#license">License</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_eeg.html#acknowledgment">Acknowledgment</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="brainmaze_eeg.html#sleep-classification-and-feature-extraction">Sleep classification and feature extraction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="brainmaze_eeg.html#evoked-response-potential-analysis">Evoked Response Potential Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="brainmaze_eeg.html#eeg-slow-wave-detection-and-analysis">EEG Slow Wave Detection and Analysis</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_eeg.html#funding">Funding</a></li>
 <li class="toctree-l2"><a class="reference internal" href="brainmaze_eeg.html#brainmaze-eeg-modules">BrainMaze EEG Modules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eeg/classifiers.html">Classifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eeg/classifiers.html">Classifiers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eeg/classifiers.html#brainmaze_eeg.classifiers.KDEBayesianCausalModel"><code class="docutils literal notranslate"><span class="pre">KDEBayesianCausalModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/classifiers.html#brainmaze_eeg.classifiers.KDEBayesianModel"><code class="docutils literal notranslate"><span class="pre">KDEBayesianModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/classifiers.html#brainmaze_eeg.classifiers.KDEBayesianModelNC"><code class="docutils literal notranslate"><span class="pre">KDEBayesianModelNC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/classifiers.html#brainmaze_eeg.classifiers.MVGaussBayesianCausalModel"><code class="docutils literal notranslate"><span class="pre">MVGaussBayesianCausalModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/classifiers.html#brainmaze_eeg.classifiers.MVGaussBayesianModel"><code class="docutils literal notranslate"><span class="pre">MVGaussBayesianModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/classifiers.html#brainmaze_eeg.classifiers.Mapper"><code class="docutils literal notranslate"><span class="pre">Mapper</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/classifiers.html#brainmaze_eeg.classifiers.MultiChannelMVGaussBayesClassifier"><code class="docutils literal notranslate"><span class="pre">MultiChannelMVGaussBayesClassifier</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/classifiers.html#brainmaze_eeg.classifiers.SleepClassifierWrapper"><code class="docutils literal notranslate"><span class="pre">SleepClassifierWrapper</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/classifiers.html#brainmaze_eeg.classifiers.SleepStageProbabilityMarkovChainFilter"><code class="docutils literal notranslate"><span class="pre">SleepStageProbabilityMarkovChainFilter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/classifiers.html#brainmaze_eeg.classifiers.SleepStructureClassifier"><code class="docutils literal notranslate"><span class="pre">SleepStructureClassifier</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/classifiers.html#brainmaze_eeg.classifiers.multivariate_normal_"><code class="docutils literal notranslate"><span class="pre">multivariate_normal_</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="eeg/crp.html">CRP</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="eeg/crp.html#brainmaze_eeg.crp.ccep_proj"><code class="docutils literal notranslate"><span class="pre">ccep_proj()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="eeg/crp.html#brainmaze_eeg.crp.crp_method"><code class="docutils literal notranslate"><span class="pre">crp_method()</span></code></a></li>
@@ -613,7 +616,34 @@ Using SSH over HTTPS is preferred. If you are using HTTPS, you can increase the 
 <li class="toctree-l4"><a class="reference internal" href="eeg/features.wave_detector.html">Wave Detector</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="eeg/hypnogram.html">Hypnogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eeg/hypnogram.html">Hypnogram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.correct_hypnogram"><code class="docutils literal notranslate"><span class="pre">correct_hypnogram()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.correct_rem"><code class="docutils literal notranslate"><span class="pre">correct_rem()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.do_median_filtration"><code class="docutils literal notranslate"><span class="pre">do_median_filtration()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.fill_nonrem_voids"><code class="docutils literal notranslate"><span class="pre">fill_nonrem_voids()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.fill_same_voids"><code class="docutils literal notranslate"><span class="pre">fill_same_voids()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.fill_sleep_voids"><code class="docutils literal notranslate"><span class="pre">fill_sleep_voids()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.fill_wakerem_voids"><code class="docutils literal notranslate"><span class="pre">fill_wakerem_voids()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.get_awakening_time"><code class="docutils literal notranslate"><span class="pre">get_awakening_time()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.get_fell_asleep_time"><code class="docutils literal notranslate"><span class="pre">get_fell_asleep_time()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.get_hypnogram_datarate"><code class="docutils literal notranslate"><span class="pre">get_hypnogram_datarate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.get_number_of_awakenings"><code class="docutils literal notranslate"><span class="pre">get_number_of_awakenings()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.get_number_of_sleep_stages"><code class="docutils literal notranslate"><span class="pre">get_number_of_sleep_stages()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.get_rem_latency"><code class="docutils literal notranslate"><span class="pre">get_rem_latency()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.get_stage_times"><code class="docutils literal notranslate"><span class="pre">get_stage_times()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.get_stage_times_dataset"><code class="docutils literal notranslate"><span class="pre">get_stage_times_dataset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.get_time_by_key"><code class="docutils literal notranslate"><span class="pre">get_time_by_key()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.get_transition_counts"><code class="docutils literal notranslate"><span class="pre">get_transition_counts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.get_transition_matrix"><code class="docutils literal notranslate"><span class="pre">get_transition_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.get_transition_matrix_dataset"><code class="docutils literal notranslate"><span class="pre">get_transition_matrix_dataset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.is_sleep_complete"><code class="docutils literal notranslate"><span class="pre">is_sleep_complete()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.plot_hypnogram"><code class="docutils literal notranslate"><span class="pre">plot_hypnogram()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.print_sleep_score"><code class="docutils literal notranslate"><span class="pre">print_sleep_score()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.score_night"><code class="docutils literal notranslate"><span class="pre">score_night()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.transition_matrix_to_change_matrix"><code class="docutils literal notranslate"><span class="pre">transition_matrix_to_change_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="eeg/hypnogram.html#brainmaze_eeg.hypnogram.valid_dataset_index_by_duration"><code class="docutils literal notranslate"><span class="pre">valid_dataset_index_by_duration()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="eeg/preprocessing.html">Preprocessing</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="eeg/preprocessing.html#brainmaze_eeg.preprocessing.channel_data_rate_thresholding"><code class="docutils literal notranslate"><span class="pre">channel_data_rate_thresholding()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="eeg/preprocessing.html#brainmaze_eeg.preprocessing.detect_flat_line_segments"><code class="docutils literal notranslate"><span class="pre">detect_flat_line_segments()</span></code></a></li>
@@ -640,19 +670,6 @@ Using SSH over HTTPS is preferred. If you are using HTTPS, you can increase the 
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="brainmaze_torch.html">brainmaze_torch</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_torch.html#brainmaze-brain-electrophysiology-behavior-and-dynamics-analysis-toolbox-torch">BrainMaze: Brain Electrophysiology, Behavior and Dynamics Analysis Toolbox - Torch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_torch.html#documentation">Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_torch.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_torch.html#how-to-contribute">How to contribute</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="brainmaze_torch.html#troubleshooting">Troubleshooting</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_torch.html#license">License</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_torch.html#acknowledgment">Acknowledgment</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="brainmaze_torch.html#seizure-detection">Seizure detection</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_torch.html#funding">Funding</a></li>
 <li class="toctree-l2"><a class="reference internal" href="brainmaze_torch.html#brainmaze-torch-modules">BrainMaze Torch Modules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="torch/seizure_detection.html">Seizure Detection</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="torch/seizure_detection.html#example">Example</a></li>
@@ -673,15 +690,6 @@ Using SSH over HTTPS is preferred. If you are using HTTPS, you can increase the 
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="brainmaze_utils.html">brainmaze_utils</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_utils.html#brainmaze-brain-electrophysiology-behavior-and-dynamics-analysis-toolbox-utils">BrainMaze: Brain Electrophysiology, Behavior and Dynamics Analysis Toolbox - Utils</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_utils.html#documentation">Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_utils.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_utils.html#how-to-contribute">How to contribute</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="brainmaze_utils.html#troubleshooting">Troubleshooting</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_utils.html#license">License</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_utils.html#acknowledgment">Acknowledgment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="brainmaze_utils.html#brainmaze-utils-modules">BrainMaze Utils Modules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="utils/files.html">files</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="utils/files.html#brainmaze_utils.files.create_folder"><code class="docutils literal notranslate"><span class="pre">create_folder()</span></code></a></li>
@@ -738,24 +746,6 @@ Using SSH over HTTPS is preferred. If you are using HTTPS, you can increase the 
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="brainmaze_zmq.html">brainmaze_zmq</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_zmq.html#brainmaze-brain-electrophysiology-behavior-and-dynamics-analysis-toolbox-zmq">BrainMaze: Brain Electrophysiology, Behavior and Dynamics Analysis Toolbox - ZMQ</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="brainmaze_zmq.html#features">Features</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_zmq.html#documentation">Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_zmq.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_zmq.html#how-to-contribute">How to contribute</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="brainmaze_zmq.html#troubleshooting">Troubleshooting</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_zmq.html#license">License</a></li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_zmq.html#acknowledgment">Acknowledgment</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="brainmaze_zmq.html#sleep-classification-and-feature-extraction">Sleep classification and feature extraction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="brainmaze_zmq.html#evoked-response-potential-analysis">Evoked Response Potential Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="brainmaze_zmq.html#eeg-slow-wave-detection-and-analysis">EEG Slow Wave Detection and Analysis</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="brainmaze_zmq.html#funding">Funding</a></li>
 <li class="toctree-l2"><a class="reference internal" href="brainmaze_zmq.html#brainmaze-zmq-modules">BrainMaze ZMQ Modules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="zmq/abstract.html">abstract</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="zmq/abstract.html#brainmaze_zmq.abstract.ABExitHandler"><code class="docutils literal notranslate"><span class="pre">ABExitHandler</span></code></a></li>
@@ -776,6 +766,22 @@ Using SSH over HTTPS is preferred. If you are using HTTPS, you can increase the 
 <li class="toctree-l4"><a class="reference internal" href="zmq/utils.html#brainmaze_zmq.utils.setup_reply_socket"><code class="docutils literal notranslate"><span class="pre">setup_reply_socket()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="zmq/utils.html#brainmaze_zmq.utils.setup_request_socket"><code class="docutils literal notranslate"><span class="pre">setup_request_socket()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="zmq/utils.html#brainmaze_zmq.utils.setup_subscriber_socket"><code class="docutils literal notranslate"><span class="pre">setup_subscriber_socket()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="brainmaze_bci2000.html">brainmaze_bci2000</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="brainmaze_bci2000.html#brainmaze-bci2000-modules">BrainMaze BCI2000 Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bci2000/bci2000.html">bci2000</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bci2000/bci2000.html#brainmaze_bci2000.bci2000.BCI2000Reader"><code class="docutils literal notranslate"><span class="pre">BCI2000Reader</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bci2000/bids.html">bids</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bci2000/bids.html#brainmaze_bci2000.bids.bci2000_to_mefd"><code class="docutils literal notranslate"><span class="pre">bci2000_to_mefd()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="bci2000/bids.html#brainmaze_bci2000.bids.capitalize_words"><code class="docutils literal notranslate"><span class="pre">capitalize_words()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="bci2000/bids.html#brainmaze_bci2000.bids.convert_sourcedata_bci2000_to_bids"><code class="docutils literal notranslate"><span class="pre">convert_sourcedata_bci2000_to_bids()</span></code></a></li>
 </ul>
 </li>
 </ul>

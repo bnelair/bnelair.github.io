@@ -18,6 +18,7 @@
    brainmaze_torch
    brainmaze_utils
    brainmaze_zmq
+   brainmaze_bci2000
 
 
 
