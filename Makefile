@@ -25,9 +25,9 @@ clean:
 
 # Target to build all projects
 html:
-	@echo "Building all projects: $(PROJECTS)"
-	@# This loop iterates through each project name in the PROJECTS list
-	@for proj in $(PROJECTS); do \
+	@set -e; \
+	echo "Building all projects: $(PROJECTS)"; \
+	for proj in $(PROJECTS); do \
 		echo ">>> Building project: $$proj"; \
 		\
 		if [ "$$proj" = "main_page" ]; then \
