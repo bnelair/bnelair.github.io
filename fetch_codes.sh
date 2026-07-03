@@ -12,7 +12,7 @@ repos=(
 )
 
 DIR_TMP="$RDIR/tmp"
-DIR_CLONE="${DIR_TMP}/clone"make
+DIR_CLONE="${DIR_TMP}/clone"
 DIR_CODE="${DIR_TMP}/codes"
 DIR_RDM="${DIR_TMP}/rdm"
 
