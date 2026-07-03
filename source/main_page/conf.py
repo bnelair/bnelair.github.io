@@ -28,7 +28,7 @@ html_theme_options = {
     "home_page_in_toc": True,
     "external_links": [
         # {"name": "Test Main Page Link", "url": "../index.html"},
-        {"name": "Test Google Link", "url": "www.google.com"},
+        {"name": "Test Google Link", "url": "https://www.google.com"},
     ]
 }
 
