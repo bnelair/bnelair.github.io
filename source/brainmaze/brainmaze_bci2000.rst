@@ -2,6 +2,7 @@ brainmaze_bci2000
 ===================
 
 .. include:: ../../tmp/rdm/brainmaze_bci2000.md
+   :parser: markdown
 
 BrainMaze BCI2000 Modules
 """"""""""""""""""""""""""
