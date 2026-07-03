@@ -10,6 +10,7 @@
    :caption: Projects:
    :hidden:
 
+   MEF3 tools <mef3>
    Papers with Code <bnel_projects/index.html>
 
 BrainMaze toolbox |logo_brainmaze|
@@ -42,16 +43,32 @@ package with its own documentation.
 
       ZeroMQ communication wrappers for real-time acquisition pipelines.
 
-Other tools
-===========
+MEF3 tools
+==========
+
+Open Python and gRPC toolchain for the Multiscale Electrophysiology Format
+(MEF3). See the :doc:`MEF3 tools <mef3>` page for details, including the
+deprecated ``mef_tools`` library.
 
 .. grid:: 1 2 2 2
    :gutter: 2
 
-   .. grid-item-card:: MEF Tools
-      :link: https://github.com/bnelair/mef_tools
+   .. grid-item-card:: mef3io
+      :link: https://bnelair.github.io/mef3io/
 
-      Reading and writing Multiscale Electrophysiology Format (MEF3) files.
+      Read and write MEF3 data in Python. Replaces ``mef_tools``.
+
+   .. grid-item-card:: mef3io-server
+      :link: https://bnelair.github.io/mef3io-server/
+
+      gRPC streaming server with pre-caching for viewers and data-processing
+      applications.
+
+More
+====
+
+.. grid:: 1 2 2 2
+   :gutter: 2
 
    .. grid-item-card:: Papers with Code 🔬
       :link: bnel_projects/index.html
