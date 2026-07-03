@@ -9,3 +9,6 @@ __pycache__/
 brainmaze_utils
 brainmaze_eeg
 brainmaze_zmq
+# Built docs are produced by CI (make html) and deployed as a Pages artifact
+docs/
+tmp/

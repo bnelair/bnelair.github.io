@@ -8,7 +8,5 @@ The Bioelectronics Neurophysiology and Engineering Laboratory, led by Gregory A.
 a multidisciplinary discovery and translational research laboratory focused on exploring the human brain. Learn more
 on the official [website](https://www.mayo.edu/research/labs/bioelectronics-neurophysiology-engineering).
 
-This website is under construction!!!
-
 
 
