@@ -7,6 +7,7 @@ sys.path.insert(0, os.path.abspath('../../tmp/codes'))
 extensions = [
     'sphinx.ext.intersphinx',
     'sphinx_design',
+    'myst_parser',
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',  # If you use Google/NumPy style docstrings
     'sphinx.ext.coverage',
