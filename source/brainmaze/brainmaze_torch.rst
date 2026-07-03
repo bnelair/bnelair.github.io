@@ -2,6 +2,7 @@ brainmaze_torch
 ===================
 
 .. include:: ../../tmp/rdm/brainmaze_torch.md
+   :parser: markdown
 
 BrainMaze Torch Modules
 """"""""""""""""""""""""""
