@@ -1,5 +1,6 @@
 
 .. include:: ../../tmp/rdm/mef_tools.md
+   :parser: markdown
 
 .. toctree::
    :maxdepth: 1
