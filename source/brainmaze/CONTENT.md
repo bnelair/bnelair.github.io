@@ -5,7 +5,7 @@ processing of intracranial iEEG recordings to analyze epilepsy, sleep, and other
 The BrainMaze code has been divided into multiple separate packages to ensure modularity and ease of use. This is the 
 main hub for the BrainMaze project, providing links to all submodules and containing documentation for the entire project.
 
-Documentation to the whole BrainMaze project is available at [https://bnelair.github.io/brainmaze/](https://bnelair.github.io/brainmaze/).
+The BrainMaze packages are listed on the lab hub, [https://bnelair.github.io/](https://bnelair.github.io/); each package has its own documentation site.
 
 This project was originally developed as a part of the 
 [BEhavioral STate Analysis Toolbox (BEST)](https://github.com/bnelair/best-toolbox) project. However, further development and support 
@@ -20,22 +20,28 @@ has transferred to the BrainMaze project.
 ## Submodules
 
 ### BrainMaze EEG
-- **Repository**: [Repo](https://github.com/bnelair/brainmaze_eeg)
+- **Repository**: [Repo](https://github.com/bnelair/brainmaze-eeg)
+- **Documentation**: [Documentation](https://bnelair.github.io/brainmaze-eeg/)
 - **Description**: Tools and utils to perform complex analysis of EEG and iEEG data. The tools currently include tools for:
 - **Includes**:
   - iEEG signal preprocessing tools
-  - iEEG feature extraction for sleep classification
+  - Interictal spike detection (Janca, Barkmeier, and a gap-aware wrapper)
+  - iEEG feature extraction, sleep classification and hypnogram scoring
   - Slow wave feature extraction and analysis
   - A Python implementation of the CRP method for evoked response potential analysis
 
-### BrainMaze Torch
-- **Repository**: [Repo](https://github.com/bnelair/brainmaze_torch)
-- **Description**: Tools for deep learning and machine learning in the BrainMaze project. This includes:
-- **Includes**:
-  - Tools for seizure detection
+### BrainMaze EEG Models
+- **Repository**: [Repo](https://github.com/bnelair/brainmaze-eeg-models)
+- **Documentation**: [Documentation](https://bnelair.github.io/brainmaze-eeg-models/)
+- **Description**: Ready-to-use trained EEG/iEEG models on ONNX Runtime (CPU or GPU, no PyTorch): seizure probability and OpenSpindleNet sleep-spindle detection.
+
+### BrainMaze Torch (superseded)
+- **Repository**: [Repo](https://github.com/bnelair/brainmaze-torch)
+- **Description**: Superseded by BrainMaze EEG Models and being retired. PyTorch tools for seizure detection.
 
 ### BrainMaze Utils
-- **Repository**: [Repo](https://github.com/bnelair/brainmaze_utils)
+- **Repository**: [Repo](https://github.com/bnelair/brainmaze-utils)
+- **Documentation**: [Documentation](https://bnelair.github.io/brainmaze-utils/)
 - **Description**: Elementary utilities used across multiple BrainMaze projects and codes. This was separated to ensure lightweight deployment and package controllability.
 - **Includes**:
   - Time series filtration and processing
@@ -98,8 +104,8 @@ This code was developed and originally published by **Mivalt (2022)** and **Slad
 
 
 #### Additional Resources
-- [Readme to the EEG Slow Detection project](https://bnelair.github.io/brainmaze_eeg/project_wave_detector.html)
-- [Single file example with sample data](https://github.com/bnelair/brainmaze_eeg/tree/main/demo/eeg_wave_detection)
+- [Readme to the EEG Slow Detection project](https://bnelair.github.io/brainmaze-eeg/project_wave_detector.html)
+- [Single file example with sample data](https://github.com/bnelair/brainmaze-eeg/tree/main/demo/eeg_wave_detection)
 
 
 ## Funding

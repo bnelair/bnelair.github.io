@@ -1,17 +1,11 @@
-brainmaze_zmq
+brainmaze-zmq
 ===================
 
-.. include:: ../../tmp/rdm/brainmaze_zmq.md
+The documentation of **brainmaze-zmq** is maintained with the package and is
+not duplicated here: https://bnelair.github.io/brainmaze-zmq/
 
-BrainMaze ZMQ Modules
-""""""""""""""""""""""""""
+It provides ZeroMQ utilities and abstract wrappers for multiprocess
+communication in real-time acquisition pipelines.
 
-.. toctree::
-   :maxdepth: 3
-   :caption: BrainMaze ZMQ - Modules
-
-   zmq/abstract.rst
-   zmq/utils.rst
-
-
-
+- **Install**: ``pip install brainmaze-zmq``
+- **Repository**: https://github.com/bnelair/brainmaze-zmq
