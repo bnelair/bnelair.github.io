@@ -4,7 +4,6 @@ PROJECTS      := main_page bnel_projects
 
 SOURCEDIR     = source
 HTMLDIR       = docs
-PYTHONCODEDIR = tmp/codes
 
 # Phony targets prevent conflicts with files of the same name
 .PHONY: html clean help all

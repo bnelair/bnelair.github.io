@@ -5,10 +5,5 @@ __pycache__/
 **/__pycache__
 **/__pycache__/*
 **/*.pyc
-/tmp/
-brainmaze_utils
-brainmaze_eeg
-brainmaze_zmq
 # Built docs are produced by CI (make html) and deployed as a Pages artifact
 docs/
-tmp/
