@@ -34,9 +34,9 @@ package with its own documentation.
    .. grid-item-card:: BrainMaze EEG Models
       :link: https://bnelair.github.io/brainmaze-eeg-models/
 
-      Ready-to-use trained EEG/iEEG models on ONNX Runtime (CPU or GPU, no
-      PyTorch needed): seizure probability and OpenSpindleNet sleep-spindle
-      detection.
+      Ready-to-use trained EEG/iEEG models on ONNX Runtime (CPU, or NVIDIA
+      (CUDA) GPU via ``onnxruntime-gpu``; no PyTorch needed): seizure
+      probability and OpenSpindleNet sleep-spindle detection.
 
    .. grid-item-card:: BrainMaze Utils
       :link: https://bnelair.github.io/brainmaze-utils/
@@ -52,9 +52,9 @@ package with its own documentation.
    .. grid-item-card:: BrainMaze Torch (superseded)
       :link: https://bnelair.github.io/brainmaze-torch/
 
-      Superseded by **BrainMaze EEG Models**, which carries on its
-      seizure-probability model without needing PyTorch. Kept for existing
-      users; new projects should use ``brainmaze-eeg-models``.
+      Superseded by **BrainMaze EEG Models** (``brainmaze-eeg-models``), which
+      carries on its seizure-probability model without needing PyTorch. New
+      projects should use ``brainmaze-eeg-models``.
 
 MEF3 tools
 ==========
@@ -70,8 +70,8 @@ libraries, a streaming server, and a desktop app. See the
    .. grid-item-card:: mef3io
       :link: https://bnelair.github.io/mef3io/
 
-      Read, write and de-identify MEF 3.0 recordings from Python, MATLAB and
-      C++. Replaces ``mef_tools``.
+      Read and write MEF 3.0 recordings from Python, MATLAB and C++, and
+      de-identify them from Python and C++. Replaces ``mef_tools``.
 
    .. grid-item-card:: mef3io-server
       :link: https://bnelair.github.io/mef3io-server/
@@ -89,8 +89,8 @@ libraries, a streaming server, and a desktop app. See the
    .. grid-item-card:: mef3io-coregistration
       :link: https://github.com/bnelair/mef3io-coregistration
 
-      Read two MEF3 recordings as one through a saved coregistration (clock
-      map), built on mef3io.
+      Read two MEF3 recordings that were coregistered (aligned onto one
+      clock) as if they were one recording. Built on mef3io.
 
 More
 ====

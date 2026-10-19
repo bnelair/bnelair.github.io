@@ -16,8 +16,9 @@ desktop app for working with recordings without programming.
    .. grid-item-card:: mef3io
       :link: https://bnelair.github.io/mef3io/
 
-      The current library for reading, writing and de-identifying MEF 3.0
-      data from Python, MATLAB and C++. **Replaces mef_tools.**
+      The current library for reading and writing MEF 3.0 data from Python,
+      MATLAB and C++, and for de-identifying it from Python and C++.
+      **Replaces mef_tools.**
 
    .. grid-item-card:: mef3io-server
       :link: https://bnelair.github.io/mef3io-server/
@@ -35,16 +36,17 @@ desktop app for working with recordings without programming.
    .. grid-item-card:: mef3io-coregistration
       :link: https://github.com/bnelair/mef3io-coregistration
 
-      Read two MEF3 recordings as one through a saved coregistration (clock
-      map), built on mef3io.
+      Read two MEF3 recordings that were coregistered (aligned onto one
+      clock) as if they were one recording. Built on mef3io.
 
 mef3io
 ------
 
-``mef3io`` is the recommended library for MEF 3.0 data. It reads, writes and
-de-identifies MEF 3.0 recordings (EEG, iEEG, ECG and other regularly sampled
-signals) from **Python**, **MATLAB** and **C++**, with one C++ core shared by
-all three. Sessions written by mef3io open in the established MEF 3.0 tools
+``mef3io`` is the recommended library for MEF 3.0 data. It reads and writes
+MEF 3.0 recordings (EEG, iEEG, ECG and other regularly sampled signals) from
+**Python**, **MATLAB** and **C++**, with one C++ core shared by all three, and
+makes de-identified copies from Python and C++ (from MATLAB, through
+``python -m mef3io anonymize`` in a terminal). Sessions written by mef3io open in the established MEF 3.0 tools
 (meflib, pymef, mef_tools) and vice versa. It is the successor to
 ``mef_tools`` and the starting point for new projects that work with MEF 3.0
 files.
@@ -93,8 +95,10 @@ package: download the installer for your system from the GitHub Releases page.
 mef3io-coregistration
 ---------------------
 
-``mef3io-coregistration`` reads two MEF3 recordings as one through a saved
-coregistration (clock map). It is built on mef3io.
+``mef3io-coregistration`` reads two MEF3 recordings that were coregistered
+(aligned onto one clock) as if they were one recording. It is only the reader:
+it opens a saved coregistration result (``*.coreg.json``) and reads the
+recordings through it. It is built on mef3io.
 
 - **Repository**: https://github.com/bnelair/mef3io-coregistration
 

@@ -34,7 +34,7 @@ where both configurations are explained)::
 
     from brainmaze_eeg.features.wave_detector import WaveDetector
 
-    # x: Fz-(A1+A2)/2 in uV; broadband: the same signal band-passed 0.5-35 Hz
+    # x: Fz-(A1+A2)/2 in uV, sampled at fs Hz; broadband: the same signal band-passed 0.5-35 Hz
 
     # (1) slow-oscillation (0.5-0.9 Hz) downslope as computed since v1.0.0
     #     (default trough='refine'): detect on the band, measure on the broadband trace
@@ -63,7 +63,7 @@ Acknowledgement
 
 Version
 """"""""""""""""""
-Original study code: version 1.0 (2024-06-01) by V. Kremen (Kremen.Vaclav@mayo.edu).
+Original study code: version 1.0 (2024-07-05) by V. Kremen (Kremen.Vaclav@mayo.edu).
 
 
 Examples
@@ -73,8 +73,10 @@ Example of individual slow wave detections.
 
 .. image:: ../../img/wave_detection/slow_waves_example.png
    :width: 900
+   :alt: One 30-second NREM3 EEG epoch with 30 detected slow waves; each wave's zero crossing (red) and trough (blue) are marked and its downslope is drawn as a dashed line. Mean amplitude 29.95 uV, mean slope 229.86 uV/s
 
 Extracted features for the whole night.
 
 .. image:: ../../img/wave_detection/slope_vaclav.png
    :width: 900
+   :alt: Whole-night features over about 7 hours: the hypnogram (awake, NREM1-3, REM), mean power in the 0.5-0.9 Hz and 1.0-3.9 Hz bands, and the delta and slow-delta slow-wave slopes in uV/s

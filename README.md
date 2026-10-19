@@ -1,26 +1,53 @@
-# BrainMaze Project
+# Bioelectronics Neurophysiology and Engineering Lab (BNEL): software hub
 
-## Functionalities
-- **EEG Signal Processing**: Includes transformations, classification, and feature extraction.
+Source of **https://bnelair.github.io/**, the documentation hub for the open-source software of the Bioelectronics
+Neurophysiology and Engineering Lab (BNEL) at Mayo Clinic. Each tool is its own repository with its own documentation;
+this site links them together.
 
-## Submodules
-### BrainMaze Utils
-- **Repository**: [Repo](https://github.com/bnelair/brainmaze_utils)
-- **Documentation**: [Documentation](https://bnelair.github.io/brainmaze_utils/)
-- **Description**: Elementary utilities used across multiple BrainMaze projects and codes. This was separated to ensure lightweight deployment and package controllability.
+## BrainMaze toolbox
+A modular Python toolbox for analyzing brain electrophysiology, behavior and dynamics. Each component is a standalone,
+`pip`-installable package.
 
-### BrainMaze ZMQ
-- **Repository**: [Repo](https://github.com/bnelair/brainmaze-zmq)
-- **Documentation**: [Documentation](https://bnelair.github.io/brainmaze_zmq/)
-- **Description**: Wrappers around ZMQ controlling for optimal socket release after process termination.
+| Package | Purpose | Documentation | Repository |
+|---|---|---|---|
+| brainmaze-eeg | EEG/iEEG analysis: spike detection, slow-wave detection, sleep classification, hypnogram scoring, CRP analysis | [docs](https://bnelair.github.io/brainmaze-eeg/) | [repo](https://github.com/bnelair/brainmaze-eeg) |
+| brainmaze-eeg-models | Trained EEG/iEEG models on ONNX Runtime (CPU, or NVIDIA (CUDA) GPU via `onnxruntime-gpu`; no PyTorch needed) | [docs](https://bnelair.github.io/brainmaze-eeg-models/) | [repo](https://github.com/bnelair/brainmaze-eeg-models) |
+| brainmaze-utils | Shared signal, file and statistics utilities | [docs](https://bnelair.github.io/brainmaze-utils/) | [repo](https://github.com/bnelair/brainmaze-utils) |
+| brainmaze-zmq | ZeroMQ communication wrappers for real-time acquisition pipelines | [docs](https://bnelair.github.io/brainmaze-zmq/) | [repo](https://github.com/bnelair/brainmaze-zmq) |
+| brainmaze-torch | Superseded by brainmaze-eeg-models | [docs](https://bnelair.github.io/brainmaze-torch/) | [repo](https://github.com/bnelair/brainmaze-torch) |
+
+## MEF3 tools
+Open-source toolchain for the Multiscale Electrophysiology Format (MEF 3.0). See the
+[MEF3 tools page](https://bnelair.github.io/mef3.html).
+
+- **mef3io**: read and write MEF 3.0 recordings from Python, MATLAB and C++, and de-identify them from Python and C++.
+  Replaces the deprecated `mef_tools`. [docs](https://bnelair.github.io/mef3io/), [repo](https://github.com/bnelair/mef3io)
+- **mef3io-server**: gRPC server and client for efficient, concurrent streaming of MEF3 data.
+  [docs](https://bnelair.github.io/mef3io-server/), [repo](https://github.com/bnelair/mef3io-server)
+- **mef3io-studio** (pre-release): desktop app for exploring and anonymizing MEF 3.0 recordings.
+  [repo](https://github.com/bnelair/mef3io-studio)
+- **mef3io-coregistration**: read two MEF3 recordings that were coregistered (aligned onto one clock) as if they were
+  one recording. [repo](https://github.com/bnelair/mef3io-coregistration)
+
+## Papers with Code
+Code examples and links to papers: https://bnelair.github.io/bnel_projects/ (for example,
+[EEG slow-wave detection](https://bnelair.github.io/bnel_projects/project_wave_detector.html)).
+
+## Building the site
+```bash
+pip install -r requirements.txt
+make html        # output in docs/
+```
+The site is built and deployed to GitHub Pages by `.github/workflows/docs.yml` on every push to `main`; pull requests
+are built but not deployed.
 
 ## Acknowledgment
-This code was developed and originally published by **Mivalt (2022)** and **Sladky (2022)**. When using this toolbox, please cite the related papers. See the sections below for references to individual submodules.
+When using the BrainMaze toolbox, please cite:
 
 - **F. Mivalt et V. Kremen et al.**, “Electrical brain stimulation and continuous behavioral state tracking in ambulatory humans,” *J. Neural Eng.*, vol. 19, no. 1, p. 016019, Feb. 2022, doi: [10.1088/1741-2552/ac4bfd](https://doi.org/10.1088/1741-2552/ac4bfd).
 - **V. Sladky et al.**, “Distributed brain co-processor for tracking spikes, seizures and behaviour during electrical brain stimulation,” *Brain Commun.*, vol. 4, no. 3, May 2022, doi: [10.1093/braincomms/fcac115](https://doi.org/10.1093/braincomms/fcac115).
 
-## Submodule References
+## Method references
 ### Sleep Classification and Feature Extraction
 - **F. Mivalt et V. Kremen et al.**, “Electrical brain stimulation and continuous behavioral state tracking in ambulatory humans,” *J. Neural Eng.*, vol. 19, no. 1, p. 016019, Feb. 2022, doi: [10.1088/1741-2552/ac4bfd](https://doi.org/10.1088/1741-2552/ac4bfd).
 - **F. Mivalt et V. Sladky et al.**, “Automated sleep classification with chronic neural implants in freely behaving canines,” *J. Neural Eng.*, vol. 20, no. 4, p. 046025, Aug. 2023, doi: [10.1088/1741-2552/aced21](https://doi.org/10.1088/1741-2552/aced21).
@@ -43,8 +70,8 @@ This code was developed and originally published by **Mivalt (2022)** and **Slad
 - **Carvalho DZ, et al.**, “Non-rapid eye movement sleep slow-wave activity features are associated with amyloid accumulation in older adults with obstructive sleep apnoea,” *Brain Commun.*, Oct. 2024, doi: [10.1093/braincomms/fcae354](https://doi.org/10.1093/braincomms/fcae354).
 
 #### Additional Resources
-- [Readme to the EEG Slow Detection project](https://bnelair.github.io/brainmaze_eeg/project_wave_detector.html)
-- [Single file example with sample data](https://github.com/bnelair/brainmaze_eeg/tree/main/demo/eeg_wave_detection)
+- [EEG slow-wave detection project page](https://bnelair.github.io/brainmaze-eeg/project_wave_detector.html)
+- [Single file example with sample data](https://github.com/bnelair/brainmaze-eeg/tree/main/demo/eeg_wave_detection)
 
 ## Funding
 This project was supported by:
