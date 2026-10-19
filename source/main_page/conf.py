@@ -27,10 +27,6 @@ html_theme_options = {
     "repository_url": "https://github.com/bnelair/bnelair.github.io", # Or your specific project repo
     "use_repository_button": True,
     "home_page_in_toc": True,
-    "external_links": [
-        # {"name": "Test Main Page Link", "url": "../index.html"},
-        {"name": "Test Google Link", "url": "https://www.google.com"},
-    ]
 }
 
 version = '0.0.1'

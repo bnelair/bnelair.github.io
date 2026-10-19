@@ -33,13 +33,11 @@ html_theme_options = {
     "use_issues_button": True,
 
     'navigation_depth': 5,
-    "repository_url": "https://github.com/bnelair/brainmaze_docs", # Or your specific project repo
+    "repository_url": "https://github.com/bnelair/bnelair.github.io",
+    "repository_branch": "main",
+    "path_to_docs": "source/bnel_projects",
     "use_repository_button": True,
     "home_page_in_toc": True,
-    "external_links": [
-        {"name": "Test Main Page Link", "url": "../index.html"},
-        {"name": "Test Google Link", "url": "https://www.google.com"},
-    ]
 }
 
 intersphinx_mapping = {

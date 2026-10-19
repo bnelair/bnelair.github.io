@@ -1,22 +1,12 @@
-brainmaze_utils
+brainmaze-utils
 ===================
 
-.. include:: ../../tmp/rdm/brainmaze_utils.md
+The documentation of **brainmaze-utils** (3.0.0) is maintained with the package
+and is not duplicated here: https://bnelair.github.io/brainmaze-utils/
 
-BrainMaze Utils Modules
-""""""""""""""""""""""""""
+It covers signal processing (filtering, resampling, decimation), helpers for
+NaN gaps in recordings (``brainmaze_utils.gaps``), file handling, annotation
+types, statistics and vector utilities.
 
-.. toctree::
-   :maxdepth: 1
-   :caption: BrainMaze - Python Packages
-
-   utils/files
-   utils/signal
-   utils/stat
-   utils/types
-   utils/vector
-
-
-
-
-
+- **Install**: ``pip install brainmaze-utils``
+- **Repository**: https://github.com/bnelair/brainmaze-utils
